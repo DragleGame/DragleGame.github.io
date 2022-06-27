@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dragle</title>
+  <link rel="stylesheet" href="/styles/dragle.css">
+</head>
+<body>
+  
+    <div id="page-container">
+    <div id="content-wrap">
+  
+  <header>
+    <div class="buttonsHeader"><img src="/assets/info.png" alt="icon-information" id="icon-information"></div>
+    <div class="logoHeader"><h1>dragle</h1></div>
+    <div class="buttonsHeader"><img src="/assets/stats.png" alt="icon-stats" id="icon-stats"></div>
+  </header>
+  
+  <div id="formContainer">
+    <form action="post" id="dragleForm">
+      <input type="text" list="dragQueens" id="dragName" name="fullName" placeholder="Guess the Drag Queen!">
+      <datalist id="dragQueens">
+    </datalist>
+    <button type="submit" id="gussBtn">Guess</button>
+    </form>
+
+    <div id="resultContainer" class="hidden">
+      <h4 id="finalAnswer"></h4>
+      <p id="answerSeason"></p>
+      <button id="shareButton">Share results</button>
+    </div>
+  </div>
+  
+
+  
+  <div id="dragTags">
+    <p class="dragTag hidden" id="franchise"></p>
+    <p class="dragTag hidden" id="season"></p>
+    <p class="dragTag hidden" id="alternativeQueen">Alternative Queen</p>
+    <p class="dragTag hidden" id="pageantQueen">Pageant Queen</p>
+    <p class="dragTag hidden" id="fashionQueen">Fashion Queen</p>
+    <p class="dragTag hidden" id="comedyQueen">Comedy Queen</p>
+    <p class="dragTag hidden" id="lipsyncAssassin">Lipsync Assassin</p>
+    <p class="dragTag hidden" id="wonSnatchGame">Won Snatch Game</p>
+    <p class="dragTag hidden" id="wonMissCongeniality">Miss Congeniality</p>
+    <p class="dragTag hidden" id="seasonWinner">Season Winner</p>
+  </div>
+
+  <div id="pastGuessesContainer"></div>
+
+  <div id="endModal" class="modal">
+    <div class="modalContent">
+      <button id="closeModal" class="close">&times;</button>
+      <h3 id="endPhrase"></h3>
+      <p id="answer"></p>
+      <button id="shareButtonModal">Share results</button>
+      <p id="nextGame">New drag in <span id="countdown-two"></span></p>
+      <div id="statistics">
+        <div class="statsBox">
+          <p class="played statsNumber"></p>
+          <p class="statsText">Played</p>
+        </div>
+        <div class="statsBox">
+          <p class="won statsNumber"></p>
+          <p class="statsText">Won</p>
+        </div>
+        <div class="statsBox">
+          <p class="currentStreakNum statsNumber"></p>
+          <p class="statsText">Current Streak</p>
+        </div>
+        <div class="statsBox">
+          <p class="longestStreakNum statsNumber"></p>
+          <p class="statsText">Longest Streak</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="statsModal" class="modal">
+    <div class="modalContent">
+      <button id="closeStatsModal" class="close">&times;</button>
+      <h3>Your stats:</h3>
+      <div id="statisticsContent">
+        <div class="statsBox">
+          <p class="statsPlayed statsNumber"></p>
+          <p class="statsText">Played</p>
+        </div>
+        <div class="statsBox">
+          <p class="statsWon statsNumber"></p>
+          <p class="statsText">Won</p>
+        </div>
+        <div class="statsBox">
+          <p class="statsCurrentStreakNum statsNumber"></p>
+          <p class="statsText">Current Streak</p>
+        </div>
+        <div class="statsBox">
+          <p class="statsLongestStreakNum statsNumber"></p>
+          <p class="statsText">Longest Streak</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="infoModal" class="modal">
+    <div class="modalContent">
+      <button id="closeInfoModal" class="close">&times;</button>
+      <h3>How to play:</h3>
+      <p>Guess the right DRAG QUEEN in x tries.
+<br><br>
+        Each guess must be a valid contestant. Queens from all Drag Race franchises around the world are valid. 
+        <br><br>
+        Type your guess or choose from the list and hit "Guess".
+        <br><br>
+        After each guess, you'll recieve clues based on the queen you chose, showing you how close you are from the right anwser. You'll be able to guess based on season, age, country and type of drag.
+        <br><br>
+        Examples
+        The queen is also a Comedy Queen, but is younger and from an earlier Drag Race season than your guess.
+        <br>
+        The queen is also from Drag Race Espana, but is older than your guess.
+        <br>
+        The queen is also a winner and a Fashion Queen, but is from another franchise.
+        <br>
+        A new drag queen will be available each day for you to guess!
+        </p>
+      
+    </div>
+  </div>
+
+  
+  <button id="start" class="hiddenn">Restart game</button>
+</div>
+
+  <footer>
+    <p class="footerText">Copyright Dragle 2022</p>
+    <p class="footerText">Enjoying dragle? 🥂<a href="https://www.buymeacoffee.com/dragle" target="_blank" rel="noopener noreferrer">Buy us a mimosa!</a></p>
+  </footer>
+</div>
+<script type="module" src="/scripts/app.js"></script>
+</body>
+</html>
+

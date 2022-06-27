@@ -1,0 +1,351 @@
+@import url("/styles/common.css");
+
+/*FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;600&display=swap');
+
+/*RESET*/
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 50px;    
+}
+
+
+/*HEADER*/
+header {
+  margin: 0 auto;
+  text-align: center;
+  width: 60%;
+  
+  align-items: center;
+}
+.buttonsHeader{
+  width: 9%;
+  margin: 0 auto;
+  display: inline-flex;
+}
+
+#icon-information, #icon-stats {
+  margin: 0 auto;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+}
+
+.logoHeader {
+  width: 80%;
+  margin: 0 auto;
+  display: inline-flex;
+}
+
+h1 {
+  font-size: 70px;
+  text-align: center;
+  color: var(--primary);
+  padding: 0 0 20px;
+  margin: 0 auto;
+}
+
+#help {
+color: var(--white);
+font-size: 16px;
+position: fixed;
+top: 3%;
+right: 10%;
+}
+
+/*GUESS BOX*/
+#formContainer {
+  width: 60%;
+  margin: 0 auto;
+  padding: 30px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#resultContainer {
+  margin: 0 auto;
+  vertical-align: middle;
+  text-align: center;
+  
+}
+
+h6 {
+  font-size: 20px;
+  color: var(--text);
+  text-align: center;
+}
+
+#dragleForm {
+  position: relative;
+}
+
+#dragName {
+  border: 3px solid var(--text);
+  background-color: var(--white);
+  height: 50px;
+  border-radius: 50px;
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+  vertical-align: middle;
+  font-size: 16px;
+  color: var(--text);
+}
+
+#gussBtn {
+  border: 3px solid var(--text);
+  background-color: var(--primary);
+  height: 50px;
+  border-radius: 50px;
+  width: 19%;
+  padding: 0;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 20px;
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/*DRAG TAGS*/
+#dragTags {
+  margin: 0 auto;
+  width: 55%;
+  text-align: center;
+}
+
+.dragTag {
+  font-size: 17px;
+  color: var(--text);
+  background-color: var(--primary);
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-align: center;
+  margin: 15px;
+  display: inline-flex;
+  
+}
+
+/*PAST GUESSES*/
+#pastGuessesContainer {
+  margin: 40px auto;
+  width: 55%;
+}
+
+.pastGuessBox {
+  width: 100%;
+  padding: 16px;
+  margin: 16px auto;
+  border-top: 1px solid var(--primary);
+}
+
+#guessDrag {
+  font-size: 22px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.dragStats {
+  display: inline;
+  margin-right: 16px;
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+#finalAnswer {
+  font-size: 36px;
+  text-align: center;
+  color: var(--text);
+}
+
+/*MODAL*/
+.modal {
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modalContent {
+  background-color: #fefefe;
+  border: 3px solid var(--text);
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 30px;
+  width: 50%; /* Could be more or less, depending on screen size */
+  text-align: center;
+}
+
+h3 {
+  color: var(--primary);
+  font-size: 21px;
+  font-weight: 300;
+}
+
+#answer, #correctAnswer {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 24px;
+  padding: 25px 0;
+}
+
+#shareButton, #shareButtonModal {
+  background-color: var(--primary);
+  padding: 10px 20px;
+  border: 3px solid var(--text);
+  border-radius: 3px;
+  font-size: 20px;
+  color: var(--white);
+  margin: 20px auto;
+  font-weight: 600;
+}
+
+#shareButton:hover, #shareButtonModal:hover {
+  background-color: var(--white);
+  color: var(--primary);
+}
+
+#nextGame {
+  color: var(--text);
+  font-size: 16px;
+  padding: 15px;
+}
+
+#statistics {
+  border-top: 1px solid var(--grey);
+  padding: 30px 0 0;
+  display: flex;
+  text-align: center;
+  align-content: center;
+}
+
+#statisticsContent {
+  padding: 30px 0 0;
+  display: flex;
+  text-align: center;
+  align-content: center;
+}
+
+.statsBox {
+  width: 25%;
+}
+
+.statsText {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.close {
+  color: var(--grey);
+  float: right;
+  font-size: 36px;
+  font-weight: 300;
+  margin-top: -20px;
+  border: none;
+  background-color: var(--white);
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--primary);
+  padding: 15px 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+}
+
+.footerText {
+  font-size: 16px;
+  color: var(--bg);
+  text-align: center;
+  display: inline-flex;
+  padding: 0 30px;
+}
+
+/*RESPONSIVE*/
+
+@media only screen and (max-width: 900px) {
+
+  #pastGuessesContainer, header {
+    width: 80%;
+  }
+
+  #dragTags {
+    padding-top: 20px;
+    width: 90%;
+  }
+
+  #formContainer {
+    padding: 0;
+    width: 90%;
+  }
+
+  #resultContainer {
+    width: 100%;
+  }
+
+  #dragName {
+    width: 100%;
+  }
+
+  #gussBtn {
+    width: 29%;
+  }
+
+  .modalContent {
+    width: 85%;
+  }
+
+}
+
+
+@media only screen and (max-width: 500px) {
+  #gussBtn {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+  .logoHeader {
+    width: 70%;
+  }
+
+  .dragTag {
+    font-size: 15px;
+    margin: 7px;
+    padding: 5px 10px;
+  }
+}

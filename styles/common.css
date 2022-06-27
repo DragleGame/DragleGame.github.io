@@ -1,0 +1,20 @@
+:root {
+  --primary: #C379FF;
+  --secondary: #F3639F;
+  --text: #000000;
+  --warning: red;
+  --bg: #F7F1EC;
+  --white: #ffffff;
+  --grey: #C0CAD3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kanit', sans-serif;
+}
+
+body {
+  height: 100%;
+  background-color: var(--bg);
+}
