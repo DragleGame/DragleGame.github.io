@@ -48,7 +48,7 @@ import { dragQueens } from "./utils.js";
 let list = document.getElementById("dragQueens");
 dragQueens.forEach(function (dragQueen) {
   let option = document.createElement("option");
-  option.value = dragQueen.name;
+  option.innerHTML = dragQueen.name;
   list.appendChild(option);
 });
 
@@ -564,6 +564,16 @@ btnShare.addEventListener("click", (event) => {
 btnShareModal.addEventListener("click", (event) => {
   console.log(copyShared);
   navigator.clipboard.writeText(copyShared);
+
+  navigator.clipboard.writeText(copyShared).then(
+    function () {
+      /* clipboard successfully set */
+      alert("successfully copied");
+    },
+    function () {
+      alert("something went wrong");
+    }
+  );
 });
 
 //open stats modal
