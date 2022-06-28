@@ -28,7 +28,6 @@
   <link rel="stylesheet" href="/styles/dragle.css">
 </head>
 <body>
-  
     <div id="page-container">
     <div id="content-wrap">
   
@@ -39,11 +38,11 @@
   </header>
   
   <div id="formContainer">
-    <form action="post" id="dragleForm">
-      <input type="text" list="dragQueens" id="dragName" name="fullName" autocomplete="off" placeholder="Guess the Drag Queen!">
-      <datalist id="dragQueens">
-    </datalist>
-    <button type="submit" id="gussBtn">Guess</button>
+    <form autocomplete="off" action="post" id="dragleForm">
+      <div class="autocomplete">
+        <input type="text" id="dragName" name="fullName" placeholder="Guess the Drag Queen!">
+      </div>
+      <button type="submit" id="gussBtn">Guess</button>
     </form>
 
     <div id="resultContainer" class="hidden">
