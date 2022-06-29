@@ -360,6 +360,10 @@ footer {
   #content-wrap {
     padding-bottom: 80px;    
   }
+
+  .examplesImgs {
+    width: 100%;
+  }
 }
 
 
