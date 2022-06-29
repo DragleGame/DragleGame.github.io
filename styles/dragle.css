@@ -25,10 +25,9 @@
 
 /*HEADER*/
 header {
-  margin: 0 auto;
+  margin: 30px auto 50px;
   text-align: center;
   width: 60%;
-  
   align-items: center;
 }
 .buttonsHeader{
@@ -48,6 +47,13 @@ header {
   width: 80%;
   margin: 0 auto;
   display: inline-flex;
+  vertical-align: middle;
+}
+
+#logoImg {
+width: 50%;
+margin:0 auto;
+
 }
 
 h1 {
@@ -363,6 +369,10 @@ footer {
 
   .examplesImgs {
     width: 100%;
+  }
+
+  #logoImg {
+  width: 75%;
   }
 }
 
