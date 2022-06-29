@@ -42,6 +42,10 @@ window.onload = function () {
   if (window.localStorage.getItem("totalGames") < 1) {
     infoModal.style.display = "block";
   }
+  if (!window.localStorage.getItem("lastPlayed")) {
+    resetGameState();
+    window.localStorage.setItem("lastPlayed", dayPlayed);
+  }
 
   let dateToday = new Date().toJSON().slice(0, 10);
   console.log(dateToday);
@@ -121,14 +125,6 @@ function checkDrag(guess, todaysDrag) {
 function updateTotalGames() {
   let totalGames = window.localStorage.getItem("totalGames") || 0;
   window.localStorage.setItem("totalGames", Number(totalGames) + 1);
-
-  let restoreIndex = window.localStorage.getItem("indodq");
-  console.log(dragQueens[restoreIndex]);
-
-  if (dragQueens[restoreIndex].used === 1) {
-    dragQueens[restoreIndex].used = 2;
-    console.log(dragQueens[restoreIndex]);
-  }
 }
 
 function chooseDrag() {
