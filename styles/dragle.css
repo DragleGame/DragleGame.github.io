@@ -294,6 +294,10 @@ footer {
   padding: 0 30px;
 }
 
+.examplesImgs {
+  margin: 15px auto;
+}
+
 /*RESPONSIVE*/
 
 @media only screen and (max-width: 900px) {

@@ -39,6 +39,18 @@ let btnShare = document.getElementById("shareButton");
 let btnShareModal = document.getElementById("shareButtonModal");
 
 window.onload = function () {
+  if (window.localStorage.getItem("totalGames") < 1) {
+    infoModal.style.display = "block";
+  }
+
+  let dateToday = new Date().toJSON().slice(0, 10);
+  console.log(dateToday);
+  console.log(dayPlayed);
+
+  if (dateToday !== dayPlayed) {
+    resetGameState();
+    location.reload();
+  }
   loadLocalStorage();
 };
 //array of objects of queens
@@ -120,34 +132,20 @@ function updateTotalGames() {
 }
 
 function chooseDrag() {
-  //daily picking of a drag
-  let chooseQueen = dragQueens[Math.floor(Math.random() * dragQueens.length)];
-  if (chooseQueen.used === 1) {
-    //chooseQueen.used = true;
-    dragOfTheDay = chooseQueen;
-    window.localStorage.setItem("dqotd", JSON.stringify(dragOfTheDay));
-    console.log(dragOfTheDay);
-    let dragNameToSearch = dragOfTheDay.name;
-    console.log(dragNameToSearch);
-
-    saveIndex = dragQueens
-      .map(function (obj) {
-        return obj.name;
-      })
-      .indexOf(dragNameToSearch);
-
-    window.localStorage.setItem("indodq", Number(saveIndex));
-  } else {
-    chooseDrag();
-  }
+  //escolha correta das drags 1 vez ao dia
+  const getDayOfYear = () => {
+    const now = new Date();
+    const start = new Date(now.getFullYear(), 0, 0);
+    const diff = now - start;
+    const oneDay = 1000 * 60 * 60 * 24;
+    return Math.floor(diff / oneDay) - 1;
+  };
+  dragOfTheDay = dragQueens[getDayOfYear()];
+  window.localStorage.setItem("dqotd", JSON.stringify(dragOfTheDay));
+  console.log(dragOfTheDay);
 }
 
 function resetGameState() {
-  let dateToday = new Date().toJSON().slice(0, 10);
-  console.log(dateToday);
-  console.log(dayPlayed);
-
-  //if (dateToday !== dayPlayed) {
   window.localStorage.removeItem("dragTags");
   window.localStorage.removeItem("pastGuesses");
   window.localStorage.removeItem("dqotd");
@@ -155,7 +153,6 @@ function resetGameState() {
   window.localStorage.removeItem("contentShare");
   window.localStorage.setItem("guessCount", 0);
   chooseDrag();
-  //}
 }
 
 function saveTime() {
@@ -472,7 +469,7 @@ form.addEventListener("submit", function (event) {
     //reset form
     form.reset();
   } else {
-    if (guess === dragOfTheDay) {
+    if (guess.name === dragOfTheDay.name) {
       rightGuess();
     } else {
       checkDrag(guess, dragOfTheDay);
@@ -543,10 +540,10 @@ form.addEventListener("submit", function (event) {
 });
 
 //restart game
-btnStart.onclick = function () {
-  resetGameState();
-  location.reload();
-};
+//btnStart.onclick = function () {
+//resetGameState();
+//location.reload();
+//};
 
 //close modal window
 closeModal.onclick = function () {
