@@ -550,13 +550,20 @@ closeModal.onclick = function () {
 btnShare.addEventListener("click", (event) => {
   console.log(copyShared);
   navigator.clipboard.writeText(copyShared);
+  btnShare.innerText = "Copied";
+  setTimeout(() => {
+    btnShare.innerText = "Share results";
+  }, 2000); // 👈️ delay in milliseconds
 });
 
 //share button modal
-
 btnShareModal.addEventListener("click", (event) => {
   console.log(copyShared);
   navigator.clipboard.writeText(copyShared);
+  btnShareModal.innerText = "Copied";
+  setTimeout(() => {
+    btnShareModal.innerText = "Share results";
+  }, 2000); // 👈️ delay in milliseconds
 });
 
 //open stats modal
@@ -777,7 +784,7 @@ function autocomplete(inp, arr) {
 
 /*An array containing all the drag names*/
 let dragNamesList = [
-  "Victoria 'Porkchop' Parker",
+  "Victoria &sbquo;Porkchop&sbquo; Parker",
   "Tammie Brown",
   "Akashia",
   "Jade",
@@ -820,7 +827,7 @@ let dragNamesList = [
   "DiDa Ritz",
   "Kenya Michaels",
   "Latrice Royale",
-  "Phi Phi O'Hara",
+  "Phi Phi O&sbquo;Hara",
   "Chad Michaels",
   "Sharon Needles",
   "Jinkx Monsoon",
@@ -882,7 +889,7 @@ let dragNamesList = [
   "Shea Couleé",
   "Trinity The Tuck",
   "Alexis Michelle",
-  "Nina Bo'nina Brown",
+  "Nina Bo&sbquo;nina Brown",
   "Valentina",
   "Farrah Moan",
   "Aja",
@@ -902,7 +909,7 @@ let dragNamesList = [
   "Meannie Minaj",
   "Aquaria",
   "Kameron Michaels",
-  "Asia O'Hara",
+  "Asia O&sbquo;Hara",
   "Miz Cracker",
   "Monét X Change",
   "The Vixen",
@@ -923,7 +930,7 @@ let dragNamesList = [
   "Genie",
   "Miss Gimhuay",
   "Mocha Diva",
-  "Maya B'Haro",
+  "Maya B&sbquo;Haro",
   "Katy Killer",
   "Silver Sonic",
   "M Stranger Fox",
@@ -934,7 +941,7 @@ let dragNamesList = [
   "Nina West",
   "Shuga Cain",
   "Plastique Tiara",
-  "Ra'Jah O'Hara",
+  "Ra&sbquo;Jah O&sbquo;Hara",
   "Scarlet Envy",
   "Ariel Versace",
   "Mercedes Iman Diamond",
@@ -956,7 +963,7 @@ let dragNamesList = [
   "Gigi Goode",
   "Jackie Cox",
   "Heidi N Closet",
-  "Widow Von'Du",
+  "Widow Von&sbquo;Du",
   "Jan",
   "Brita",
   "Aiden Zhane",
@@ -977,7 +984,7 @@ let dragNamesList = [
   "Juice Boxx",
   "Envy Peru",
   "Janey Jacké",
-  "Ma'MaQueen",
+  "Ma&sbquo;MaQueen",
   "Miss Abby OMG",
   "ChelseaBoy",
   "Sederginne",
@@ -1017,7 +1024,7 @@ let dragNamesList = [
   "Elektra Shock",
   "Maxi Shield",
   "Etcetera Etcetera",
-  "Anita Wigl'it",
+  "Anita Wigl&sbquo;it",
   "Coco Jumbo",
   "Jojo Zaho",
   "Carmen Farala",
@@ -1082,7 +1089,7 @@ let dragNamesList = [
   "Kerri Colby",
   "Maddy Morphosis",
   "Orion Story",
-  "Kornbread 'The Snack' Jeté",
+  "Kornbread &sbquo;The Snack&sbquo; Jeté",
   "Alyssa Hunter",
   "June Jambalaya",
   "Pangina Heals",

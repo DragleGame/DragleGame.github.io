@@ -1328,7 +1328,7 @@ let dragQueens = [
     used: 1,
   },
   {
-    name: "Maya B'Haro",
+    name: "Maya B&sbquo;&sbquo;Haro",
     seasonNumber: 12,
     age: 35,
     franchise: "Thailand",
@@ -1376,7 +1376,7 @@ let dragQueens = [
     used: 1,
   },
   {
-    name: "Victoria 'Porkchop' Parker",
+    name: "Victoria &sbquo;Porkchop&sbquo; Parker",
     seasonNumber: 1,
     age: 53,
     franchise: "United States",
@@ -2016,7 +2016,7 @@ let dragQueens = [
     used: 1,
   },
   {
-    name: "Widow Von'Du",
+    name: "Widow Von&sbquo;Du",
     seasonNumber: 15,
     age: 34,
     franchise: "United States",
@@ -2512,7 +2512,7 @@ let dragQueens = [
     used: 1,
   },
   {
-    name: "Ma'MaQueen",
+    name: "Ma&sbquo;MaQueen",
     seasonNumber: 17,
     age: 32,
     franchise: "Holland",
@@ -2688,7 +2688,7 @@ let dragQueens = [
     used: 1,
   },
   {
-    name: "Nina Bo'nina Brown",
+    name: "Nina Bo&sbquo;nina Brown",
     seasonNumber: 9,
     age: 39,
     franchise: "United States",
@@ -3200,7 +3200,7 @@ let dragQueens = [
     used: 1,
   },
   {
-    name: "Phi Phi O'Hara",
+    name: "Phi Phi O&sbquo;Hara",
     seasonNumber: 4,
     age: 36,
     franchise: "United States",
@@ -4080,7 +4080,7 @@ let dragQueens = [
     used: 1,
   },
   {
-    name: "Ra'Jah O'Hara",
+    name: "Ra&sbquo;Jah O&sbquo;Hara",
     seasonNumber: 13,
     age: 37,
     franchise: "United States",
@@ -4320,7 +4320,7 @@ let dragQueens = [
     used: 1,
   },
   {
-    name: "Anita Wigl'it",
+    name: "Anita Wigl&sbquo;it",
     seasonNumber: 20,
     age: 32,
     franchise: "Down Under",
@@ -5104,7 +5104,7 @@ let dragQueens = [
     used: 1,
   },
   {
-    name: "Kornbread 'The Snack' Jeté",
+    name: "Kornbread &sbquo;The Snack&sbquo; Jeté",
     seasonNumber: 26,
     age: 30,
     franchise: "United States",
