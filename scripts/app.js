@@ -195,21 +195,21 @@ function rightGuess() {
   let currentGuessNum = JSON.parse(nuberOfGuesses) + 1;
 
   if (currentGuessNum == 1) {
-    copyWin = "Dragle 1/8\n👑;\nPlay here: dragle.fun";
+    copyWin = "Dragle 1/8\n👑;\nPlay here: https://dragle.fun/";
   } else if (currentGuessNum == 2) {
-    copyWin = "Dragle 2/8\n❌👑;\nPlay here: dragle.fun";
+    copyWin = "Dragle 2/8\n❌👑;\nPlay here: https://dragle.fun/";
   } else if (currentGuessNum == 3) {
-    copyWin = "Dragle 3/8\n❌❌👑;\nPlay here: dragle.fun";
+    copyWin = "Dragle 3/8\n❌❌👑;\nPlay here: https://dragle.fun/";
   } else if (currentGuessNum == 4) {
-    copyWin = "Dragle 4/8\n❌❌❌👑;\nPlay here: dragle.fun";
+    copyWin = "Dragle 4/8\n❌❌❌👑;\nPlay here: https://dragle.fun/";
   } else if (currentGuessNum == 5) {
-    copyWin = "Dragle 5/8\n❌❌❌❌👑;\nPlay here: dragle.fun";
+    copyWin = "Dragle 5/8\n❌❌❌❌👑;\nPlay here: https://dragle.fun/";
   } else if (currentGuessNum == 6) {
-    copyWin = "Dragle 6/8\n❌❌❌❌❌👑;\nPlay here: dragle.fun";
+    copyWin = "Dragle 6/8\n❌❌❌❌❌👑;\nPlay here: https://dragle.fun/";
   } else if (currentGuessNum == 7) {
-    copyWin = "Dragle 7/8\n❌❌❌❌❌❌👑;\nPlay here: dragle.fun";
+    copyWin = "Dragle 7/8\n❌❌❌❌❌❌👑;\nPlay here: https://dragle.fun/";
   } else if (currentGuessNum == 8) {
-    copyWin = "Dragle 8/8\n❌❌❌❌❌❌❌👑;\nPlay here: dragle.fun";
+    copyWin = "Dragle 8/8\n❌❌❌❌❌❌❌👑;\nPlay here: https://dragle.fun/";
   }
 
   copyShared = copyWin;
@@ -280,7 +280,7 @@ function wrongGuess() {
   //save time
   saveTime();
 
-  let copyLost = "Dragle X/8\n❌❌❌❌❌❌❌❌\nPlay here: dragle.fun";
+  let copyLost = "Dragle X/8\n❌❌❌❌❌❌❌❌\nPlay here: https://dragle.fun/";
   copyShared = copyLost;
   window.localStorage.setItem("contentShare", copyShared);
 
