@@ -42,18 +42,29 @@ window.onload = function () {
   if (window.localStorage.getItem("totalGames") < 1) {
     infoModal.style.display = "block";
   }
-  if (!window.localStorage.getItem("lastPlayed")) {
+
+  if (window.localStorage.getItem("lastPlayed") == undefined) {
     resetGameState();
     window.localStorage.setItem("lastPlayed", dayPlayed);
   }
 
-  let dateToday = new Date().toJSON().slice(0, 10);
-  console.log(dateToday);
-  console.log(dayPlayed);
+  const testDayToday = () => {
+    const now = new Date();
+    const start = new Date(now.getFullYear(), 0, 0);
+    const diff = now - start;
+    const oneDay = 1000 * 60 * 60 * 24;
+    return Math.floor(diff / oneDay) - 1;
+  };
 
-  if (dateToday !== dayPlayed) {
+  let testDaaaayTodaaay = testDayToday();
+  let dateToday = new Date().toJSON().slice(0, 10);
+  let savedDatePlayed = window.localStorage.getItem("testday");
+  console.log(testDaaaayTodaaay);
+  console.log(savedDatePlayed);
+
+  if (testDaaaayTodaaay != savedDatePlayed) {
     resetGameState();
-    location.reload();
+    //location.reload();
   }
   loadLocalStorage();
 };
@@ -137,7 +148,9 @@ function chooseDrag() {
     return Math.floor(diff / oneDay) - 1;
   };
   dragOfTheDay = dragQueens[getDayOfYear()];
+  let testDay = getDayOfYear();
   window.localStorage.setItem("dqotd", JSON.stringify(dragOfTheDay));
+  window.localStorage.setItem("testday", testDay);
   console.log(dragOfTheDay);
 }
 
