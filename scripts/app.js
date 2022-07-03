@@ -561,22 +561,48 @@ closeModal.onclick = function () {
 
 //share button
 btnShare.addEventListener("click", (event) => {
-  console.log(copyShared);
-  navigator.clipboard.writeText(copyShared);
-  btnShare.innerText = "Copied";
-  setTimeout(() => {
-    btnShare.innerText = "Share results";
-  }, 2000); // 👈️ delay in milliseconds
+  if (navigator.share) {
+    navigator
+      .share({
+        title: "Dragle",
+        url: "https://dragle.fun",
+        text: copyShared,
+      })
+      .then(() => {
+        console.log("Thanks for sharing!");
+      })
+      .catch(console.error);
+  } else {
+    console.log(copyShared);
+    navigator.clipboard.writeText(copyShared);
+    btnShare.innerText = "Copied";
+    setTimeout(() => {
+      btnShare.innerText = "Share results";
+    }, 2000); // 👈️ delay in milliseconds
+  }
 });
 
 //share button modal
 btnShareModal.addEventListener("click", (event) => {
-  console.log(copyShared);
-  navigator.clipboard.writeText(copyShared);
-  btnShareModal.innerText = "Copied";
-  setTimeout(() => {
-    btnShareModal.innerText = "Share results";
-  }, 2000); // 👈️ delay in milliseconds
+  if (navigator.share) {
+    navigator
+      .share({
+        title: "Dragle",
+        url: "https://dragle.fun",
+        text: copyShared,
+      })
+      .then(() => {
+        console.log("Thanks for sharing!");
+      })
+      .catch(console.error);
+  } else {
+    console.log(copyShared);
+    navigator.clipboard.writeText(copyShared);
+    btnShare.innerText = "Copied";
+    setTimeout(() => {
+      btnShare.innerText = "Share results";
+    }, 2000); // 👈️ delay in milliseconds
+  }
 });
 
 //open stats modal
@@ -797,7 +823,7 @@ function autocomplete(inp, arr) {
 
 /*An array containing all the drag names*/
 let dragNamesList = [
-  "Victoria &sbquo;Porkchop&sbquo; Parker",
+  "Victoria Porkchop Parker",
   "Tammie Brown",
   "Akashia",
   "Jade",
@@ -840,7 +866,7 @@ let dragNamesList = [
   "DiDa Ritz",
   "Kenya Michaels",
   "Latrice Royale",
-  "Phi Phi O&sbquo;Hara",
+  "Phi Phi OHara",
   "Chad Michaels",
   "Sharon Needles",
   "Jinkx Monsoon",
@@ -902,7 +928,7 @@ let dragNamesList = [
   "Shea Couleé",
   "Trinity The Tuck",
   "Alexis Michelle",
-  "Nina Bo&sbquo;nina Brown",
+  "Nina Bonina Brown",
   "Valentina",
   "Farrah Moan",
   "Aja",
@@ -922,7 +948,7 @@ let dragNamesList = [
   "Meannie Minaj",
   "Aquaria",
   "Kameron Michaels",
-  "Asia O&sbquo;Hara",
+  "Asia OHara",
   "Miz Cracker",
   "Monét X Change",
   "The Vixen",
@@ -943,18 +969,18 @@ let dragNamesList = [
   "Genie",
   "Miss Gimhuay",
   "Mocha Diva",
-  "Maya B&sbquo;Haro",
+  "Maya BHaro",
   "Katy Killer",
   "Silver Sonic",
   "M Stranger Fox",
   "Yvie Oddly",
   "Brooke Lynn Hytes",
-  "A'keria C. Davenport",
+  "Akeria C. Davenport",
   "Silky Nutmeg Ganache",
   "Nina West",
   "Shuga Cain",
   "Plastique Tiara",
-  "Ra&sbquo;Jah O&sbquo;Hara",
+  "RaJah OHara",
   "Scarlet Envy",
   "Ariel Versace",
   "Mercedes Iman Diamond",
@@ -976,7 +1002,7 @@ let dragNamesList = [
   "Gigi Goode",
   "Jackie Cox",
   "Heidi N Closet",
-  "Widow Von&sbquo;Du",
+  "Widow VonDu",
   "Jan",
   "Brita",
   "Aiden Zhane",
@@ -997,7 +1023,7 @@ let dragNamesList = [
   "Juice Boxx",
   "Envy Peru",
   "Janey Jacké",
-  "Ma&sbquo;MaQueen",
+  "MaMaQueen",
   "Miss Abby OMG",
   "ChelseaBoy",
   "Sederginne",
@@ -1022,7 +1048,7 @@ let dragNamesList = [
   "Bimini Bon-Boulash",
   "Tayce",
   "Ellie Diamond",
-  "A'Whora",
+  "AWhora",
   "Sister Sister",
   "Tia Kofi",
   "Joe Black",
@@ -1037,7 +1063,7 @@ let dragNamesList = [
   "Elektra Shock",
   "Maxi Shield",
   "Etcetera Etcetera",
-  "Anita Wigl&sbquo;it",
+  "Anita Wiglit",
   "Coco Jumbo",
   "Jojo Zaho",
   "Carmen Farala",
@@ -1102,7 +1128,7 @@ let dragNamesList = [
   "Kerri Colby",
   "Maddy Morphosis",
   "Orion Story",
-  "Kornbread &sbquo;The Snack&sbquo; Jeté",
+  "Kornbread The Snack Jeté",
   "Alyssa Hunter",
   "June Jambalaya",
   "Pangina Heals",
