@@ -754,7 +754,6 @@ function autocomplete(inp, arr) {
           "<input type='hidden' value='" + arr[i].replace(/'/g, "&#39;") + "'>";
         /*execute a function when someone clicks on the item value (DIV element):*/
         b.addEventListener("click", function (e) {
-          alert(this.getElementsByTagName("input")[0].value);
           /*insert the value for the autocomplete text field:*/
           inp.value = this.getElementsByTagName("input")[0].value;
           /*close the list of autocompleted values,
