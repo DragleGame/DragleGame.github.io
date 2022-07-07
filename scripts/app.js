@@ -22,6 +22,13 @@ let lipsyncAssassin = document.getElementById("lipsyncAssassin");
 let wonSnatchGame = document.getElementById("wonSnatchGame");
 let wonMissCongeniality = document.getElementById("wonMissCongeniality");
 let seasonWinner = document.getElementById("seasonWinner");
+let firstOut = document.getElementById("firstOut");
+let impersonator = document.getElementById("impersonator");
+let singer = document.getElementById("singer");
+let dancer = document.getElementById("dancer");
+let allStars = document.getElementById("allStars");
+let vsTheWorld = document.getElementById("vsTheWorld");
+let ballWinner = document.getElementById("ballWinner");
 let btnStart = document.getElementById("start");
 const form = document.querySelector("#dragleForm");
 let endModal = document.querySelector("#endModal");
@@ -269,6 +276,34 @@ function rightGuess() {
   if (dragOfTheDay.seasonWinner === true) {
     seasonWinner.classList.remove("hidden");
   }
+
+  if (dragOfTheDay.firstOut === true) {
+    firstOut.classList.remove("hidden");
+  }
+
+  if (dragOfTheDay.impersonator === true) {
+    impersonator.classList.remove("hidden");
+  }
+
+  if (dragOfTheDay.singer === true) {
+    singer.classList.remove("hidden");
+  }
+
+  if (dragOfTheDay.dancer === true) {
+    dancer.classList.remove("hidden");
+  }
+
+  if (dragOfTheDay.allStars === true) {
+    allStars.classList.remove("hidden");
+  }
+
+  if (dragOfTheDay.vsTheWorld === true) {
+    vsTheWorld.classList.remove("hidden");
+  }
+
+  if (dragOfTheDay.ballWinner === true) {
+    ballWinner.classList.remove("hidden");
+  }
 }
 
 function wrongGuess() {
@@ -340,6 +375,34 @@ function wrongGuess() {
 
   if (dragOfTheDay.seasonWinner === true) {
     seasonWinner.classList.remove("hidden");
+  }
+
+  if (dragOfTheDay.firstOut === true) {
+    firstOut.classList.remove("hidden");
+  }
+
+  if (dragOfTheDay.impersonator === true) {
+    impersonator.classList.remove("hidden");
+  }
+
+  if (dragOfTheDay.singer === true) {
+    singer.classList.remove("hidden");
+  }
+
+  if (dragOfTheDay.dancer === true) {
+    dancer.classList.remove("hidden");
+  }
+
+  if (dragOfTheDay.allStars === true) {
+    allStars.classList.remove("hidden");
+  }
+
+  if (dragOfTheDay.vsTheWorld === true) {
+    vsTheWorld.classList.remove("hidden");
+  }
+
+  if (dragOfTheDay.ballWinner === true) {
+    ballWinner.classList.remove("hidden");
   }
 }
 
@@ -471,6 +534,33 @@ form.addEventListener("submit", function (event) {
       if (matchVal.seasonWinner === true) {
         seasonWinner.classList.remove("hidden");
       }
+      if (matchVal.firstOut === true) {
+        firstOut.classList.remove("hidden");
+      }
+
+      if (matchVal.impersonator === true) {
+        impersonator.classList.remove("hidden");
+      }
+
+      if (matchVal.singer === true) {
+        singer.classList.remove("hidden");
+      }
+
+      if (matchVal.dancer === true) {
+        dancer.classList.remove("hidden");
+      }
+
+      if (matchVal.allStars === true) {
+        allStars.classList.remove("hidden");
+      }
+
+      if (matchVal.vsTheWorld === true) {
+        vsTheWorld.classList.remove("hidden");
+      }
+
+      if (matchVal.ballWinner === true) {
+        ballWinner.classList.remove("hidden");
+      }
     }
     guessCount++;
     window.localStorage.setItem("guessCount", Number(guessCount));
@@ -541,6 +631,34 @@ form.addEventListener("submit", function (event) {
 
       if (matchVal.seasonWinner === true) {
         seasonWinner.classList.remove("hidden");
+      }
+
+      if (matchVal.firstOut === true) {
+        firstOut.classList.remove("hidden");
+      }
+
+      if (matchVal.impersonator === true) {
+        impersonator.classList.remove("hidden");
+      }
+
+      if (matchVal.singer === true) {
+        singer.classList.remove("hidden");
+      }
+
+      if (matchVal.dancer === true) {
+        dancer.classList.remove("hidden");
+      }
+
+      if (matchVal.allStars === true) {
+        allStars.classList.remove("hidden");
+      }
+
+      if (matchVal.vsTheWorld === true) {
+        vsTheWorld.classList.remove("hidden");
+      }
+
+      if (matchVal.ballWinner === true) {
+        ballWinner.classList.remove("hidden");
       }
       wrongGuess();
     }
