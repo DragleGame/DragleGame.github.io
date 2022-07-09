@@ -4377,7 +4377,7 @@ let dragQueens = [
     franchise: "Holland",
     season: "Season 1",
     alternativeQueen: true,
-    pageantQueen: false,
+    pageantQueen: true,
     fashionQueen: false,
     comedyQueen: false,
     lipsyncAssassin: false,
