@@ -340,6 +340,19 @@ footer {
 
 }
 
+@media only screen and (max-width: 790px){
+  footer {
+    height: 95px;
+  }
+
+  #content-wrap {
+    padding-bottom: 95px;    
+  }
+
+  .footerText{
+    padding: 5px 30px;
+  }
+}
 
 @media only screen and (max-width: 560px) {
   #gussBtn {
@@ -360,11 +373,11 @@ footer {
   }
 
   footer {
-    height: 80px;
+    height: 120px;
   }
 
   #content-wrap {
-    padding-bottom: 80px;    
+    padding-bottom: 120px;    
   }
 
   .examplesImgs {
