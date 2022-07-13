@@ -26,9 +26,11 @@ let firstOut = document.getElementById("firstOut");
 let impersonator = document.getElementById("impersonator");
 let singer = document.getElementById("singer");
 let dancer = document.getElementById("dancer");
-let allStars = document.getElementById("allStars");
+let comebackQueen = document.getElementById("comebackQueen");
 let vsTheWorld = document.getElementById("vsTheWorld");
 let ballWinner = document.getElementById("ballWinner");
+let doubleShantay = document.getElementById("doubleShantay");
+let doubleSashay = document.getElementById("doubleSashay");
 let btnStart = document.getElementById("start");
 const form = document.querySelector("#dragleForm");
 let endModal = document.querySelector("#endModal");
@@ -50,10 +52,10 @@ window.onload = function () {
     infoModal.style.display = "block";
   }
 
-  if (window.localStorage.getItem("lastPlayed") == undefined) {
-    resetGameState();
-    window.localStorage.setItem("lastPlayed", dayPlayed);
-  }
+  //if (window.localStorage.getItem("lastPlayed") == undefined) {
+  //resetGameState();
+  //window.localStorage.setItem("lastPlayed", dayPlayed);
+  //}
 
   const testDayToday = () => {
     const now = new Date();
@@ -293,8 +295,8 @@ function rightGuess() {
     dancer.classList.remove("hidden");
   }
 
-  if (dragOfTheDay.allStars === true) {
-    allStars.classList.remove("hidden");
+  if (dragOfTheDay.comebackQueen === true) {
+    comebackQueen.classList.remove("hidden");
   }
 
   if (dragOfTheDay.vsTheWorld === true) {
@@ -303,6 +305,14 @@ function rightGuess() {
 
   if (dragOfTheDay.ballWinner === true) {
     ballWinner.classList.remove("hidden");
+  }
+
+  if (dragOfTheDay.doubleShantay === true) {
+    doubleShantay.classList.remove("hidden");
+  }
+
+  if (dragOfTheDay.doubleSashay === true) {
+    doubleSashay.classList.remove("hidden");
   }
 }
 
@@ -328,7 +338,7 @@ function wrongGuess() {
   endModal.style.display = "block";
 
   //show restart button
-  btnStart.style.display = "block";
+  //btnStart.style.display = "block";
 
   //COLOCAR NOME DA QUEEN NA PAGINA
   let answerSeason = document.querySelector("#answerSeason");
@@ -393,8 +403,8 @@ function wrongGuess() {
     dancer.classList.remove("hidden");
   }
 
-  if (dragOfTheDay.allStars === true) {
-    allStars.classList.remove("hidden");
+  if (dragOfTheDay.comebackQueen === true) {
+    comebackQueen.classList.remove("hidden");
   }
 
   if (dragOfTheDay.vsTheWorld === true) {
@@ -403,6 +413,14 @@ function wrongGuess() {
 
   if (dragOfTheDay.ballWinner === true) {
     ballWinner.classList.remove("hidden");
+  }
+
+  if (dragOfTheDay.doubleShantay === true) {
+    doubleShantay.classList.remove("hidden");
+  }
+
+  if (dragOfTheDay.doubleSashay === true) {
+    doubleSashay.classList.remove("hidden");
   }
 }
 
@@ -489,7 +507,7 @@ form.addEventListener("submit", function (event) {
 
       guessCard.append(guessContent, seasonContent, ageContent);
 
-      guessBoard.append(guessCard);
+      guessBoard.prepend(guessCard);
 
       //tags da drag
       if (matchVal.franchise) {
@@ -550,8 +568,8 @@ form.addEventListener("submit", function (event) {
         dancer.classList.remove("hidden");
       }
 
-      if (matchVal.allStars === true) {
-        allStars.classList.remove("hidden");
+      if (matchVal.comebackQueen === true) {
+        comebackQueen.classList.remove("hidden");
       }
 
       if (matchVal.vsTheWorld === true) {
@@ -561,9 +579,19 @@ form.addEventListener("submit", function (event) {
       if (matchVal.ballWinner === true) {
         ballWinner.classList.remove("hidden");
       }
+
+      if (matchVal.doubleShantay === true) {
+        doubleShantay.classList.remove("hidden");
+      }
+
+      if (matchVal.doubleSashay === true) {
+        doubleSashay.classList.remove("hidden");
+      }
     }
-    guessCount++;
-    window.localStorage.setItem("guessCount", Number(guessCount));
+    //guessCount++;
+    currentGuessCount++;
+    //window.localStorage.setItem("guessCount", Number(guessCount));
+    window.localStorage.setItem("guessCount", Number(currentGuessCount));
     preserveGameState();
     //reset form
     form.reset();
@@ -587,7 +615,7 @@ form.addEventListener("submit", function (event) {
       guessCard.append(guessContent, seasonContent, ageContent);
 
       let guessBoard = document.querySelector("#pastGuessesContainer");
-      guessBoard.append(guessCard);
+      guessBoard.prepend(guessCard);
 
       //tags da drag
       if (matchVal.franchise) {
@@ -649,8 +677,8 @@ form.addEventListener("submit", function (event) {
         dancer.classList.remove("hidden");
       }
 
-      if (matchVal.allStars === true) {
-        allStars.classList.remove("hidden");
+      if (matchVal.comebackQueen === true) {
+        comebackQueen.classList.remove("hidden");
       }
 
       if (matchVal.vsTheWorld === true) {
@@ -659,6 +687,14 @@ form.addEventListener("submit", function (event) {
 
       if (matchVal.ballWinner === true) {
         ballWinner.classList.remove("hidden");
+      }
+
+      if (matchVal.doubleShantay === true) {
+        doubleShantay.classList.remove("hidden");
+      }
+
+      if (matchVal.doubleSashay === true) {
+        doubleSashay.classList.remove("hidden");
       }
       wrongGuess();
     }
@@ -679,11 +715,10 @@ closeModal.onclick = function () {
 
 //share button
 btnShare.addEventListener("click", (event) => {
+  console.log(copyShared);
   if (navigator.share) {
     navigator
       .share({
-        title: "Dragle",
-        url: "https://dragle.fun",
         text: copyShared,
       })
       .then(() => {
