@@ -247,72 +247,89 @@ function rightGuess() {
     " years";
 
   //tags da drag na página
+  let alternativeQueenNew = document.getElementById("alternativeQueen");
   if (dragOfTheDay.alternativeQueen === true) {
-    alternativeQueen.classList.remove("hidden");
+    alternativeQueenNew.classList.remove("hidden");
   }
 
+  let pageantQueenNew = document.getElementById("pageantQueen");
   if (dragOfTheDay.pageantQueen === true) {
-    pageantQueen.classList.remove("hidden");
+    pageantQueenNew.classList.remove("hidden");
   }
 
+  let fashionQueenNew = document.getElementById("fashionQueen");
   if (dragOfTheDay.fashionQueen === true) {
-    fashionQueen.classList.remove("hidden");
+    fashionQueenNew.classList.remove("hidden");
   }
 
+  let comedyQueenNew = document.getElementById("comedyQueen");
   if (dragOfTheDay.comedyQueen === true) {
-    comedyQueen.classList.remove("hidden");
+    comedyQueenNew.classList.remove("hidden");
   }
 
+  let lipsyncAssassinNew = document.getElementById("lipsyncAssassin");
   if (dragOfTheDay.lipsyncAssassin === true) {
-    lipsyncAssassin.classList.remove("hidden");
+    lipsyncAssassinNew.classList.remove("hidden");
   }
 
+  let wonSnatchGameNew = document.getElementById("wonSnatchGame");
   if (dragOfTheDay.wonSnatchGame === true) {
-    wonSnatchGame.classList.remove("hidden");
+    wonSnatchGameNew.classList.remove("hidden");
   }
 
+  let wonMissCongenialityNew = document.getElementById("wonMissCongeniality");
   if (dragOfTheDay.wonMissCongeniality === true) {
-    wonMissCongeniality.classList.remove("hidden");
+    wonMissCongenialityNew.classList.remove("hidden");
   }
 
+  let seasonWinnerNew = document.getElementById("seasonWinner");
   if (dragOfTheDay.seasonWinner === true) {
-    seasonWinner.classList.remove("hidden");
+    seasonWinnerNew.classList.remove("hidden");
   }
 
+  let firstOutNew = document.getElementById("firstOut");
   if (dragOfTheDay.firstOut === true) {
-    firstOut.classList.remove("hidden");
+    firstOutNew.classList.remove("hidden");
   }
 
+  let impersonatorNew = document.getElementById("impersonator");
   if (dragOfTheDay.impersonator === true) {
-    impersonator.classList.remove("hidden");
+    impersonatorNew.classList.remove("hidden");
   }
 
+  let singerNew = document.getElementById("singer");
   if (dragOfTheDay.singer === true) {
-    singer.classList.remove("hidden");
+    singerNew.classList.remove("hidden");
   }
 
+  let dancerNew = document.getElementById("dancer");
   if (dragOfTheDay.dancer === true) {
-    dancer.classList.remove("hidden");
+    dancerNew.classList.remove("hidden");
   }
 
+  let comebackQueenNew = document.getElementById("comebackQueen");
   if (dragOfTheDay.comebackQueen === true) {
-    comebackQueen.classList.remove("hidden");
+    comebackQueenNew.classList.remove("hidden");
   }
 
+  let vsTheWorldNew = document.getElementById("vsTheWorld");
   if (dragOfTheDay.vsTheWorld === true) {
-    vsTheWorld.classList.remove("hidden");
+    vsTheWorldNew.classList.remove("hidden");
   }
 
+  let ballWinnerNew = document.getElementById("ballWinner");
   if (dragOfTheDay.ballWinner === true) {
-    ballWinner.classList.remove("hidden");
+    ballWinnerNew.classList.remove("hidden");
   }
 
+  let doubleShantayNew = document.getElementById("doubleShantay");
   if (dragOfTheDay.doubleShantay === true) {
-    doubleShantay.classList.remove("hidden");
+    doubleShantayNew.classList.remove("hidden");
   }
 
+  let doubleSashayNew = document.getElementById("doubleSashay");
   if (dragOfTheDay.doubleSashay === true) {
-    doubleSashay.classList.remove("hidden");
+    doubleSashayNew.classList.remove("hidden");
   }
 }
 
@@ -355,72 +372,89 @@ function wrongGuess() {
     " years";
 
   //tags da drag na página
+  let alternativeQueenNew = document.getElementById("alternativeQueen");
   if (dragOfTheDay.alternativeQueen === true) {
-    alternativeQueen.classList.remove("hidden");
+    alternativeQueenNew.classList.remove("hidden");
   }
 
+  let pageantQueenNew = document.getElementById("pageantQueen");
   if (dragOfTheDay.pageantQueen === true) {
-    pageantQueen.classList.remove("hidden");
+    pageantQueenNew.classList.remove("hidden");
   }
 
+  let fashionQueenNew = document.getElementById("fashionQueen");
   if (dragOfTheDay.fashionQueen === true) {
-    fashionQueen.classList.remove("hidden");
+    fashionQueenNew.classList.remove("hidden");
   }
 
+  let comedyQueenNew = document.getElementById("comedyQueen");
   if (dragOfTheDay.comedyQueen === true) {
-    comedyQueen.classList.remove("hidden");
+    comedyQueenNew.classList.remove("hidden");
   }
 
+  let lipsyncAssassinNew = document.getElementById("lipsyncAssassin");
   if (dragOfTheDay.lipsyncAssassin === true) {
-    lipsyncAssassin.classList.remove("hidden");
+    lipsyncAssassinNew.classList.remove("hidden");
   }
 
+  let wonSnatchGameNew = document.getElementById("wonSnatchGame");
   if (dragOfTheDay.wonSnatchGame === true) {
-    wonSnatchGame.classList.remove("hidden");
+    wonSnatchGameNew.classList.remove("hidden");
   }
 
+  let wonMissCongenialityNew = document.getElementById("wonMissCongeniality");
   if (dragOfTheDay.wonMissCongeniality === true) {
-    wonMissCongeniality.classList.remove("hidden");
+    wonMissCongenialityNew.classList.remove("hidden");
   }
 
+  let seasonWinnerNew = document.getElementById("seasonWinner");
   if (dragOfTheDay.seasonWinner === true) {
-    seasonWinner.classList.remove("hidden");
+    seasonWinnerNew.classList.remove("hidden");
   }
 
+  let firstOutNew = document.getElementById("firstOut");
   if (dragOfTheDay.firstOut === true) {
-    firstOut.classList.remove("hidden");
+    firstOutNew.classList.remove("hidden");
   }
 
+  let impersonatorNew = document.getElementById("impersonator");
   if (dragOfTheDay.impersonator === true) {
-    impersonator.classList.remove("hidden");
+    impersonatorNew.classList.remove("hidden");
   }
 
+  let singerNew = document.getElementById("singer");
   if (dragOfTheDay.singer === true) {
-    singer.classList.remove("hidden");
+    singerNew.classList.remove("hidden");
   }
 
+  let dancerNew = document.getElementById("dancer");
   if (dragOfTheDay.dancer === true) {
-    dancer.classList.remove("hidden");
+    dancerNew.classList.remove("hidden");
   }
 
+  let comebackQueenNew = document.getElementById("comebackQueen");
   if (dragOfTheDay.comebackQueen === true) {
-    comebackQueen.classList.remove("hidden");
+    comebackQueenNew.classList.remove("hidden");
   }
 
+  let vsTheWorldNew = document.getElementById("vsTheWorld");
   if (dragOfTheDay.vsTheWorld === true) {
-    vsTheWorld.classList.remove("hidden");
+    vsTheWorldNew.classList.remove("hidden");
   }
 
+  let ballWinnerNew = document.getElementById("ballWinner");
   if (dragOfTheDay.ballWinner === true) {
-    ballWinner.classList.remove("hidden");
+    ballWinnerNew.classList.remove("hidden");
   }
 
+  let doubleShantayNew = document.getElementById("doubleShantay");
   if (dragOfTheDay.doubleShantay === true) {
-    doubleShantay.classList.remove("hidden");
+    doubleShantayNew.classList.remove("hidden");
   }
 
+  let doubleSashayNew = document.getElementById("doubleSashay");
   if (dragOfTheDay.doubleSashay === true) {
-    doubleSashay.classList.remove("hidden");
+    doubleSashayNew.classList.remove("hidden");
   }
 }
 
@@ -510,82 +544,105 @@ form.addEventListener("submit", function (event) {
       guessBoard.prepend(guessCard);
 
       //tags da drag
+      let franchiseNew = document.getElementById("franchise");
       if (matchVal.franchise) {
-        franchise.innerText = matchVal.franchise;
-        franchise.classList.remove("hidden");
+        franchiseNew.innerText = matchVal.franchise;
+        franchiseNew.classList.remove("hidden");
       }
 
+      let seasonNew = document.getElementById("season");
       if (matchVal.season) {
-        season.innerText = matchVal.season;
-        season.classList.remove("hidden");
+        seasonNew.innerText = matchVal.season;
+        seasonNew.classList.remove("hidden");
+        console.log(season);
       }
 
       //characteritics
+      let alternativeQueenNew = document.getElementById("alternativeQueen");
       if (matchVal.alternativeQueen === true) {
-        alternativeQueen.classList.remove("hidden");
+        alternativeQueenNew.classList.remove("hidden");
       }
 
+      let pageantQueenNew = document.getElementById("pageantQueen");
       if (matchVal.pageantQueen === true) {
-        pageantQueen.classList.remove("hidden");
+        pageantQueenNew.classList.remove("hidden");
       }
 
+      let fashionQueenNew = document.getElementById("fashionQueen");
       if (matchVal.fashionQueen === true) {
-        fashionQueen.classList.remove("hidden");
+        fashionQueenNew.classList.remove("hidden");
       }
 
+      let comedyQueenNew = document.getElementById("comedyQueen");
       if (matchVal.comedyQueen === true) {
-        comedyQueen.classList.remove("hidden");
+        comedyQueenNew.classList.remove("hidden");
       }
 
+      let lipsyncAssassinNew = document.getElementById("lipsyncAssassin");
       if (matchVal.lipsyncAssassin === true) {
-        lipsyncAssassin.classList.remove("hidden");
+        lipsyncAssassinNew.classList.remove("hidden");
       }
 
+      let wonSnatchGameNew = document.getElementById("wonSnatchGame");
       if (matchVal.wonSnatchGame === true) {
-        wonSnatchGame.classList.remove("hidden");
+        wonSnatchGameNew.classList.remove("hidden");
       }
 
+      let wonMissCongenialityNew = document.getElementById(
+        "wonMissCongeniality"
+      );
       if (matchVal.wonMissCongeniality === true) {
-        wonMissCongeniality.classList.remove("hidden");
+        wonMissCongenialityNew.classList.remove("hidden");
       }
 
+      let seasonWinnerNew = document.getElementById("seasonWinner");
       if (matchVal.seasonWinner === true) {
-        seasonWinner.classList.remove("hidden");
+        seasonWinnerNew.classList.remove("hidden");
       }
+
+      let firstOutNew = document.getElementById("firstOut");
       if (matchVal.firstOut === true) {
-        firstOut.classList.remove("hidden");
+        firstOutNew.classList.remove("hidden");
       }
 
+      let impersonatorNew = document.getElementById("impersonator");
       if (matchVal.impersonator === true) {
-        impersonator.classList.remove("hidden");
+        impersonatorNew.classList.remove("hidden");
       }
 
+      let singerNew = document.getElementById("singer");
       if (matchVal.singer === true) {
-        singer.classList.remove("hidden");
+        singerNew.classList.remove("hidden");
       }
 
+      let dancerNew = document.getElementById("dancer");
       if (matchVal.dancer === true) {
-        dancer.classList.remove("hidden");
+        dancerNew.classList.remove("hidden");
       }
 
+      let comebackQueenNew = document.getElementById("comebackQueen");
       if (matchVal.comebackQueen === true) {
-        comebackQueen.classList.remove("hidden");
+        comebackQueenNew.classList.remove("hidden");
       }
 
+      let vsTheWorldNew = document.getElementById("vsTheWorld");
       if (matchVal.vsTheWorld === true) {
-        vsTheWorld.classList.remove("hidden");
+        vsTheWorldNew.classList.remove("hidden");
       }
 
+      let ballWinnerNew = document.getElementById("ballWinner");
       if (matchVal.ballWinner === true) {
-        ballWinner.classList.remove("hidden");
+        ballWinnerNew.classList.remove("hidden");
       }
 
+      let doubleShantayNew = document.getElementById("doubleShantay");
       if (matchVal.doubleShantay === true) {
-        doubleShantay.classList.remove("hidden");
+        doubleShantayNew.classList.remove("hidden");
       }
 
+      let doubleSashayNew = document.getElementById("doubleSashay");
       if (matchVal.doubleSashay === true) {
-        doubleSashay.classList.remove("hidden");
+        doubleSashayNew.classList.remove("hidden");
       }
     }
     //guessCount++;
@@ -618,83 +675,105 @@ form.addEventListener("submit", function (event) {
       guessBoard.prepend(guessCard);
 
       //tags da drag
+      let franchiseNew = document.getElementById("franchise");
       if (matchVal.franchise) {
-        franchise.innerText = matchVal.franchise;
-        franchise.classList.remove("hidden");
+        franchiseNew.innerText = matchVal.franchise;
+        franchiseNew.classList.remove("hidden");
       }
 
+      let seasonNew = document.getElementById("season");
       if (matchVal.season) {
-        season.innerText = matchVal.season;
-        season.classList.remove("hidden");
+        seasonNew.innerText = matchVal.season;
+        seasonNew.classList.remove("hidden");
+        console.log(season);
       }
 
       //characteritics
+      let alternativeQueenNew = document.getElementById("alternativeQueen");
       if (matchVal.alternativeQueen === true) {
-        alternativeQueen.classList.remove("hidden");
+        alternativeQueenNew.classList.remove("hidden");
       }
 
+      let pageantQueenNew = document.getElementById("pageantQueen");
       if (matchVal.pageantQueen === true) {
-        pageantQueen.classList.remove("hidden");
+        pageantQueenNew.classList.remove("hidden");
       }
 
+      let fashionQueenNew = document.getElementById("fashionQueen");
       if (matchVal.fashionQueen === true) {
-        fashionQueen.classList.remove("hidden");
+        fashionQueenNew.classList.remove("hidden");
       }
 
+      let comedyQueenNew = document.getElementById("comedyQueen");
       if (matchVal.comedyQueen === true) {
-        comedyQueen.classList.remove("hidden");
+        comedyQueenNew.classList.remove("hidden");
       }
 
+      let lipsyncAssassinNew = document.getElementById("lipsyncAssassin");
       if (matchVal.lipsyncAssassin === true) {
-        lipsyncAssassin.classList.remove("hidden");
+        lipsyncAssassinNew.classList.remove("hidden");
       }
 
+      let wonSnatchGameNew = document.getElementById("wonSnatchGame");
       if (matchVal.wonSnatchGame === true) {
-        wonSnatchGame.classList.remove("hidden");
+        wonSnatchGameNew.classList.remove("hidden");
       }
 
+      let wonMissCongenialityNew = document.getElementById(
+        "wonMissCongeniality"
+      );
       if (matchVal.wonMissCongeniality === true) {
-        wonMissCongeniality.classList.remove("hidden");
+        wonMissCongenialityNew.classList.remove("hidden");
       }
 
+      let seasonWinnerNew = document.getElementById("seasonWinner");
       if (matchVal.seasonWinner === true) {
-        seasonWinner.classList.remove("hidden");
+        seasonWinnerNew.classList.remove("hidden");
       }
 
+      let firstOutNew = document.getElementById("firstOut");
       if (matchVal.firstOut === true) {
-        firstOut.classList.remove("hidden");
+        firstOutNew.classList.remove("hidden");
       }
 
+      let impersonatorNew = document.getElementById("impersonator");
       if (matchVal.impersonator === true) {
-        impersonator.classList.remove("hidden");
+        impersonatorNew.classList.remove("hidden");
       }
 
+      let singerNew = document.getElementById("singer");
       if (matchVal.singer === true) {
-        singer.classList.remove("hidden");
+        singerNew.classList.remove("hidden");
       }
 
+      let dancerNew = document.getElementById("dancer");
       if (matchVal.dancer === true) {
-        dancer.classList.remove("hidden");
+        dancerNew.classList.remove("hidden");
       }
 
+      let comebackQueenNew = document.getElementById("comebackQueen");
       if (matchVal.comebackQueen === true) {
-        comebackQueen.classList.remove("hidden");
+        comebackQueenNew.classList.remove("hidden");
       }
 
+      let vsTheWorldNew = document.getElementById("vsTheWorld");
       if (matchVal.vsTheWorld === true) {
-        vsTheWorld.classList.remove("hidden");
+        vsTheWorldNew.classList.remove("hidden");
       }
 
+      let ballWinnerNew = document.getElementById("ballWinner");
       if (matchVal.ballWinner === true) {
-        ballWinner.classList.remove("hidden");
+        ballWinnerNew.classList.remove("hidden");
       }
 
+      let doubleShantayNew = document.getElementById("doubleShantay");
       if (matchVal.doubleShantay === true) {
-        doubleShantay.classList.remove("hidden");
+        doubleShantayNew.classList.remove("hidden");
       }
 
+      let doubleSashayNew = document.getElementById("doubleSashay");
       if (matchVal.doubleSashay === true) {
-        doubleSashay.classList.remove("hidden");
+        doubleSashayNew.classList.remove("hidden");
       }
       wrongGuess();
     }
@@ -740,8 +819,6 @@ btnShareModal.addEventListener("click", (event) => {
   if (navigator.share) {
     navigator
       .share({
-        title: "Dragle",
-        url: "https://dragle.fun",
         text: copyShared,
       })
       .then(() => {
