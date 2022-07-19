@@ -5182,7 +5182,7 @@ let dragQueens = [
     season: "Season 2",
     alternativeQueen: false,
     pageantQueen: false,
-    fashionQueen: false,
+    fashionQueen: true,
     comedyQueen: false,
     lipsyncAssassin: false,
     wonSnatchGame: false,
