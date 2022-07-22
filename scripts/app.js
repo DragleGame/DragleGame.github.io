@@ -31,6 +31,7 @@ let vsTheWorld = document.getElementById("vsTheWorld");
 let ballWinner = document.getElementById("ballWinner");
 let doubleShantay = document.getElementById("doubleShantay");
 let doubleSashay = document.getElementById("doubleSashay");
+let allStars = document.getElementById("allStars");
 let btnStart = document.getElementById("start");
 const form = document.querySelector("#dragleForm");
 let endModal = document.querySelector("#endModal");
@@ -331,6 +332,11 @@ function rightGuess() {
   if (dragOfTheDay.doubleSashay === true) {
     doubleSashayNew.classList.remove("hidden");
   }
+
+  let allStars = document.getElementById("allStars");
+  if (dragOfTheDay.allStars === true) {
+    allStars.classList.remove("hidden");
+  }
 }
 
 function wrongGuess() {
@@ -455,6 +461,11 @@ function wrongGuess() {
   let doubleSashayNew = document.getElementById("doubleSashay");
   if (dragOfTheDay.doubleSashay === true) {
     doubleSashayNew.classList.remove("hidden");
+  }
+
+  let allStars = document.getElementById("allStars");
+  if (dragOfTheDay.allStars === true) {
+    allStars.classList.remove("hidden");
   }
 }
 
@@ -644,6 +655,11 @@ form.addEventListener("submit", function (event) {
       if (matchVal.doubleSashay === true) {
         doubleSashayNew.classList.remove("hidden");
       }
+
+      let allStars = document.getElementById("allStars");
+      if (matchVal.allStars === true) {
+        allStars.classList.remove("hidden");
+      }
     }
     //guessCount++;
     currentGuessCount++;
@@ -774,6 +790,11 @@ form.addEventListener("submit", function (event) {
       let doubleSashayNew = document.getElementById("doubleSashay");
       if (matchVal.doubleSashay === true) {
         doubleSashayNew.classList.remove("hidden");
+      }
+
+      let allStars = document.getElementById("allStars");
+      if (matchVal.allStars === true) {
+        allStars.classList.remove("hidden");
       }
       wrongGuess();
     }
