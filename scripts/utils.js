@@ -5395,7 +5395,7 @@ let dragQueens = [
     comedyQueen: true,
     lipsyncAssassin: true,
     wonSnatchGame: false,
-    wonMissCongeniality: true,
+    wonMissCongeniality: false,
     seasonWinner: false,
     used: 1,
     firstOut: false,
