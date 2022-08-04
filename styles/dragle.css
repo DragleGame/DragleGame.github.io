@@ -388,6 +388,14 @@ footer {
   #logoImg {
   width: 75%;
   }
+
+  #pastGuessesContainer, header {
+    width: 95%;
+  }
+
+  .dragStats {
+    font-size: 14px;
+  }
 }
 
 
