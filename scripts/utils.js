@@ -5807,7 +5807,7 @@ let dragQueens = [
   {
     name: "Jackie Cox",
     seasonNumber: 15,
-    age: 31,
+    age: 37,
     franchise: "United States",
     season: 12,
     alternativeQueen: false,
