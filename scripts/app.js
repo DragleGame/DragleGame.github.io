@@ -5,7 +5,9 @@
 let dayPlayed = new Date().toJSON().slice(0, 10);
 let guessCount = 0; //count guesses
 let matchVal = {}; //store matched properties
+let formGuess = document.getElementById("dragName");
 let seasonComparison = "";
+let franschiseComparison = "";
 let ageComparison = "";
 let inputDrag = "";
 let guess = "";
@@ -32,6 +34,7 @@ let ballWinner = document.getElementById("ballWinner");
 let doubleShantay = document.getElementById("doubleShantay");
 let doubleSashay = document.getElementById("doubleSashay");
 let allStars = document.getElementById("allStars");
+let runnerUp = document.getElementById("runnerUp");
 let btnStart = document.getElementById("start");
 const form = document.querySelector("#dragleForm");
 let endModal = document.querySelector("#endModal");
@@ -90,25 +93,34 @@ import { dragQueens } from "./utils.js";
 //});
 
 function checkSeason(guess, todaysDrag) {
-  if (guess.seasonNumber === todaysDrag.seasonNumber) {
-    seasonComparison = guess.franchise + " " + guess.season + " =";
-  } else if (guess.seasonNumber > todaysDrag.seasonNumber) {
-    seasonComparison = guess.franchise + " " + guess.season + " ↓";
+  if (guess.season === todaysDrag.season) {
+    seasonComparison = "Season " + guess.season + " ✅";
+  } else if (guess.season > todaysDrag.season) {
+    seasonComparison = "Season " + guess.season + " ⬇️";
   } else {
-    seasonComparison = guess.franchise + " " + guess.season + " ↑";
+    seasonComparison = "Season " + guess.season + " ⬆️";
   }
   return seasonComparison;
 }
 
 function checkAge(guess, todaysDrag) {
   if (guess.age === todaysDrag.age) {
-    ageComparison = guess.age + " years =";
+    ageComparison = guess.age + " years ✅";
   } else if (guess.age > todaysDrag.age) {
-    ageComparison = guess.age + " years ↓";
+    ageComparison = guess.age + " years ⬇️";
   } else {
-    ageComparison = guess.age + " years ↑";
+    ageComparison = guess.age + " years ⬆️";
   }
   return ageComparison;
+}
+
+function checkFranchise(guess, todaysDrag) {
+  if (guess.franchise === todaysDrag.franchise) {
+    franschiseComparison = guess.franchise + " ✅";
+  } else {
+    franschiseComparison = guess.franchise + " ❌";
+  }
+  return franschiseComparison;
 }
 
 function checkCharacteristics(guess, todaysDrag) {
@@ -132,6 +144,8 @@ function checkDrag(guess, todaysDrag) {
   // check if Season number is the same, higher or lower
   //return seasonComparison
   checkSeason(guess, todaysDrag);
+
+  checkFranchise(guess, todaysDrag);
 
   //check if AGE is the same, higher or lower
   // return ageComparison
@@ -239,13 +253,8 @@ function rightGuess() {
   finalAnswer.innerText = dragOfTheDay.name;
   form.style.display = "none";
   resultContainer.classList.remove("hidden");
-  answerSeason.innerText =
-    dragOfTheDay.franchise +
-    " " +
-    dragOfTheDay.season +
-    "  |  " +
-    dragOfTheDay.age +
-    " years";
+  answerSeason.innerText = dragOfTheDay.franchise + " Season ";
+  dragOfTheDay.season + "  |  " + dragOfTheDay.age + " years";
 
   //tags da drag na página
   let alternativeQueenNew = document.getElementById("alternativeQueen");
@@ -336,6 +345,11 @@ function rightGuess() {
   let allStars = document.getElementById("allStars");
   if (dragOfTheDay.allStars === true) {
     allStars.classList.remove("hidden");
+  }
+
+  let runnerUp = document.getElementById("runnerUp");
+  if (dragOfTheDay.runnerUp === true) {
+    runnerUp.classList.remove("hidden");
   }
 }
 
@@ -371,7 +385,7 @@ function wrongGuess() {
   resultContainer.classList.remove("hidden");
   answerSeason.innerText =
     dragOfTheDay.franchise +
-    " " +
+    " Season " +
     dragOfTheDay.season +
     "  |  " +
     dragOfTheDay.age +
@@ -466,6 +480,11 @@ function wrongGuess() {
   let allStars = document.getElementById("allStars");
   if (dragOfTheDay.allStars === true) {
     allStars.classList.remove("hidden");
+  }
+
+  let runnerUp = document.getElementById("runnerUp");
+  if (dragOfTheDay.runnerUp === true) {
+    runnerUp.classList.remove("hidden");
   }
 }
 
@@ -542,6 +561,10 @@ form.addEventListener("submit", function (event) {
       let guessCard = document.createElement("div");
       guessCard.className = "pastGuessBox";
 
+      let franchiseContent = document.createElement("p");
+      franchiseContent.className = "dragStats";
+      franchiseContent.innerText = franschiseComparison;
+
       let seasonContent = document.createElement("p");
       seasonContent.className = "dragStats";
       seasonContent.innerText = seasonComparison;
@@ -550,7 +573,12 @@ form.addEventListener("submit", function (event) {
       ageContent.className = "dragStats";
       ageContent.innerText = ageComparison;
 
-      guessCard.append(guessContent, seasonContent, ageContent);
+      guessCard.append(
+        guessContent,
+        franchiseContent,
+        seasonContent,
+        ageContent
+      );
 
       guessBoard.prepend(guessCard);
 
@@ -563,9 +591,8 @@ form.addEventListener("submit", function (event) {
 
       let seasonNew = document.getElementById("season");
       if (matchVal.season) {
-        seasonNew.innerText = matchVal.season;
+        seasonNew.innerText = "Season " + matchVal.season;
         seasonNew.classList.remove("hidden");
-        console.log(season);
       }
 
       //characteritics
@@ -660,9 +687,16 @@ form.addEventListener("submit", function (event) {
       if (matchVal.allStars === true) {
         allStars.classList.remove("hidden");
       }
+
+      let runnerUp = document.getElementById("runnerUp");
+      if (matchVal.runnerUp === true) {
+        runnerUp.classList.remove("hidden");
+      }
     }
     //guessCount++;
     currentGuessCount++;
+    let guessPlaceholder = currentGuessCount + 1;
+    formGuess.placeholder = "Guess " + guessPlaceholder + " of 8";
     //window.localStorage.setItem("guessCount", Number(guessCount));
     window.localStorage.setItem("guessCount", Number(currentGuessCount));
     preserveGameState();
@@ -677,6 +711,10 @@ form.addEventListener("submit", function (event) {
       let guessCard = document.createElement("div");
       guessCard.className = "pastGuessBox";
 
+      let franchiseContent = document.createElement("p");
+      franchiseContent.className = "dragStats";
+      franchiseContent.innerText = franschiseComparison;
+
       let seasonContent = document.createElement("p");
       seasonContent.className = "dragStats";
       seasonContent.innerText = seasonComparison;
@@ -685,7 +723,12 @@ form.addEventListener("submit", function (event) {
       ageContent.className = "dragStats";
       ageContent.innerText = ageComparison;
 
-      guessCard.append(guessContent, seasonContent, ageContent);
+      guessCard.append(
+        guessContent,
+        franchiseContent,
+        seasonContent,
+        ageContent
+      );
 
       let guessBoard = document.querySelector("#pastGuessesContainer");
       guessBoard.prepend(guessCard);
@@ -699,7 +742,7 @@ form.addEventListener("submit", function (event) {
 
       let seasonNew = document.getElementById("season");
       if (matchVal.season) {
-        seasonNew.innerText = matchVal.season;
+        seasonNew.innerText = "Season " + matchVal.season;
         seasonNew.classList.remove("hidden");
         console.log(season);
       }
@@ -796,6 +839,12 @@ form.addEventListener("submit", function (event) {
       if (matchVal.allStars === true) {
         allStars.classList.remove("hidden");
       }
+
+      let runnerUp = document.getElementById("runnerUp");
+      if (matchVal.runnerUp === true) {
+        runnerUp.classList.remove("hidden");
+      }
+
       wrongGuess();
     }
     form.reset();
