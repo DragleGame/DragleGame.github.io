@@ -253,8 +253,13 @@ function rightGuess() {
   finalAnswer.innerText = dragOfTheDay.name;
   form.style.display = "none";
   resultContainer.classList.remove("hidden");
-  answerSeason.innerText = dragOfTheDay.franchise + " Season ";
-  dragOfTheDay.season + "  |  " + dragOfTheDay.age + " years";
+  answerSeason.innerText =
+    dragOfTheDay.franchise +
+    " Season " +
+    dragOfTheDay.season +
+    "  |  " +
+    dragOfTheDay.age +
+    " years";
 
   //tags da drag na página
   let alternativeQueenNew = document.getElementById("alternativeQueen");
