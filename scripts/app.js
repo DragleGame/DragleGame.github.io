@@ -1258,7 +1258,7 @@ let dragNamesList = [
   "Miz Cracker",
   "Monét X Change",
   "The Vixen",
-  "Mo Heart",
+  "Monique Heart",
   "Blair St. Clair",
   "Mayhem Miller",
   "Dusty Ray Bottoms",
