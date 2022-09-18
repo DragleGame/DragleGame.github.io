@@ -64,8 +64,8 @@ window.onload = function () {
   let testDaaaayTodaaay = testDayToday();
   let dateToday = new Date().toJSON().slice(0, 10);
   let savedDatePlayed = window.localStorage.getItem("testday");
-  console.log(testDaaaayTodaaay);
-  console.log(savedDatePlayed);
+  //console.log(testDaaaayTodaaay);
+  //console.log(savedDatePlayed);
 
   if (testDaaaayTodaaay != savedDatePlayed) {
     resetGameState();
@@ -136,13 +136,13 @@ function checkCharacteristics(guess, todaysDrag) {
 }
 
 function checkDrag(guess, todaysDrag) {
-  console.log(dragOfTheDay);
-  console.log(guess);
+  //console.log(dragOfTheDay);
+  //console.log(guess);
 
   let dragAgeToday = getAge(todaysDrag.age);
-  console.log(dragAgeToday);
+  //console.log(dragAgeToday);
   let guessAgeToday = getAge(guess.age);
-  console.log(guessAgeToday);
+  //console.log(guessAgeToday);
   // check if Season number is the same, higher or lower
   //return seasonComparison
   checkSeason(guess, todaysDrag);
@@ -177,7 +177,7 @@ function chooseDrag() {
   let testDay = getDayOfYear();
   window.localStorage.setItem("dqotd", JSON.stringify(dragOfTheDay));
   window.localStorage.setItem("testday", testDay);
-  console.log(dragOfTheDay);
+  //console.log(dragOfTheDay);
 }
 
 function resetGameState() {
@@ -217,7 +217,7 @@ function rightGuess() {
   //create copy to clipboard
   let copyWin = "";
   let nuberOfGuesses = window.localStorage.getItem("guessCount");
-  console.log(nuberOfGuesses);
+  //console.log(nuberOfGuesses);
   let currentGuessNum = JSON.parse(nuberOfGuesses) + 1;
 
   if (currentGuessNum == 1) {
@@ -748,7 +748,7 @@ form.addEventListener("submit", function (event) {
       if (matchVal.season) {
         seasonNew.innerText = "Season " + matchVal.season;
         seasonNew.classList.remove("hidden");
-        console.log(season);
+        //console.log(season);
       }
 
       //characteritics
@@ -868,7 +868,7 @@ closeModal.onclick = function () {
 
 //share button
 btnShare.addEventListener("click", (event) => {
-  console.log(copyShared);
+  //console.log(copyShared);
   if (navigator.share) {
     navigator
       .share({
@@ -879,7 +879,7 @@ btnShare.addEventListener("click", (event) => {
       })
       .catch(console.error);
   } else {
-    console.log(copyShared);
+    //console.log(copyShared);
     navigator.clipboard.writeText(copyShared);
     btnShare.innerText = "Copied";
     setTimeout(() => {
@@ -900,7 +900,7 @@ btnShareModal.addEventListener("click", (event) => {
       })
       .catch(console.error);
   } else {
-    console.log(copyShared);
+    //console.log(copyShared);
     navigator.clipboard.writeText(copyShared);
     btnShare.innerText = "Copied";
     setTimeout(() => {
