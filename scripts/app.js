@@ -1,6 +1,3 @@
-//allow only 5 guesses
-//if loose show looser prompt
-
 //declare variables
 let dayPlayed = new Date().toJSON().slice(0, 10);
 let guessCount = 0; //count guesses
@@ -56,11 +53,6 @@ window.onload = function () {
     infoModal.style.display = "block";
   }
 
-  //if (window.localStorage.getItem("lastPlayed") == undefined) {
-  //resetGameState();
-  //window.localStorage.setItem("lastPlayed", dayPlayed);
-  //}
-
   const testDayToday = () => {
     const now = new Date();
     const start = new Date(now.getFullYear(), 0, 0);
@@ -92,6 +84,11 @@ import { dragQueens } from "./utils.js";
 //  list.appendChild(option);
 //});
 
+function getAge(queen) {
+  var ageInMilliseconds = new Date() - new Date(queen);
+  return Math.floor(ageInMilliseconds / 1000 / 60 / 60 / 24 / 365); // convert to years
+}
+
 function checkSeason(guess, todaysDrag) {
   if (guess.season === todaysDrag.season) {
     seasonComparison = "Season " + guess.season + " ✅";
@@ -103,13 +100,13 @@ function checkSeason(guess, todaysDrag) {
   return seasonComparison;
 }
 
-function checkAge(guess, todaysDrag) {
-  if (guess.age === todaysDrag.age) {
-    ageComparison = guess.age + " years ✅";
-  } else if (guess.age > todaysDrag.age) {
-    ageComparison = guess.age + " years ⬇️";
+function checkAge(guessAgeToday, dragAgeToday) {
+  if (guessAgeToday === dragAgeToday) {
+    ageComparison = guessAgeToday + " years ✅";
+  } else if (guessAgeToday > dragAgeToday) {
+    ageComparison = guessAgeToday + " years ⬇️";
   } else {
-    ageComparison = guess.age + " years ⬆️";
+    ageComparison = guessAgeToday + " years ⬆️";
   }
   return ageComparison;
 }
@@ -141,6 +138,11 @@ function checkCharacteristics(guess, todaysDrag) {
 function checkDrag(guess, todaysDrag) {
   console.log(dragOfTheDay);
   console.log(guess);
+
+  let dragAgeToday = getAge(todaysDrag.age);
+  console.log(dragAgeToday);
+  let guessAgeToday = getAge(guess.age);
+  console.log(guessAgeToday);
   // check if Season number is the same, higher or lower
   //return seasonComparison
   checkSeason(guess, todaysDrag);
@@ -149,7 +151,7 @@ function checkDrag(guess, todaysDrag) {
 
   //check if AGE is the same, higher or lower
   // return ageComparison
-  checkAge(guess, todaysDrag);
+  checkAge(guessAgeToday, dragAgeToday);
   //loop to check booleans (is she a Comedy queen?....)
   //return only true booleans
   checkCharacteristics(guess, todaysDrag);
@@ -258,7 +260,7 @@ function rightGuess() {
     " Season " +
     dragOfTheDay.season +
     "  |  " +
-    dragOfTheDay.age +
+    dragAgeToday +
     " years";
 
   //tags da drag na página
@@ -328,7 +330,7 @@ function rightGuess() {
   }
 
   let vsTheWorldNew = document.getElementById("vsTheWorld");
-  if (dragOfTheDay.vsTheWorld === true) {
+  if (dragOfTheDay.VsTheWorld === true) {
     vsTheWorldNew.classList.remove("hidden");
   }
 
@@ -379,9 +381,6 @@ function wrongGuess() {
   //OPEN MODAL
   endModal.style.display = "block";
 
-  //show restart button
-  //btnStart.style.display = "block";
-
   //COLOCAR NOME DA QUEEN NA PAGINA
   let answerSeason = document.querySelector("#answerSeason");
 
@@ -393,7 +392,7 @@ function wrongGuess() {
     " Season " +
     dragOfTheDay.season +
     "  |  " +
-    dragOfTheDay.age +
+    dragAgeToday +
     " years";
 
   //tags da drag na página
@@ -463,7 +462,7 @@ function wrongGuess() {
   }
 
   let vsTheWorldNew = document.getElementById("vsTheWorld");
-  if (dragOfTheDay.vsTheWorld === true) {
+  if (dragOfTheDay.VsTheWorld === true) {
     vsTheWorldNew.classList.remove("hidden");
   }
 
@@ -669,7 +668,7 @@ form.addEventListener("submit", function (event) {
       }
 
       let vsTheWorldNew = document.getElementById("vsTheWorld");
-      if (matchVal.vsTheWorld === true) {
+      if (matchVal.VsTheWorld === true) {
         vsTheWorldNew.classList.remove("hidden");
       }
 
@@ -821,7 +820,7 @@ form.addEventListener("submit", function (event) {
       }
 
       let vsTheWorldNew = document.getElementById("vsTheWorld");
-      if (matchVal.vsTheWorld === true) {
+      if (matchVal.VsTheWorld === true) {
         vsTheWorldNew.classList.remove("hidden");
       }
 
@@ -1258,7 +1257,7 @@ let dragNamesList = [
   "Miz Cracker",
   "Monét X Change",
   "The Vixen",
-  "Monique Heart",
+  "Mo Heart",
   "Blair St. Clair",
   "Mayhem Miller",
   "Dusty Ray Bottoms",
@@ -1457,9 +1456,31 @@ let dragNamesList = [
   "Lolita Banana",
   "La Big Bertha",
   "Elips",
-  "La Briochée",
+  "La Briochee",
   "Lova Ladiva",
   "La Kahena",
+  "Bombae",
+  "Chelazon Leroux",
+  "Gisèle Lullaby",
+  "Halal Bae",
+  "Irma Gerd",
+  "Jada Shada Hudson",
+  "Kaos",
+  "Kimmy Couture",
+  "Lady Boom Boom",
+  "Miss Fiercalicious",
+  "Miss Moço",
+  "Vivian Vanderpuss",
+  "Aubrey Have",
+  "Beverly Kills",
+  "Faúx Fúr",
+  "Hannah Conda",
+  "Kween Kong",
+  "Minnie Cooper",
+  "Molly Poppinz",
+  "Pomara Fifth",
+  "Spankie Jackzon",
+  "Yuri Guaii",
 ];
 
 /*initiate the autocomplete function on the input element, and pass along the countries array as possible autocomplete values:*/
