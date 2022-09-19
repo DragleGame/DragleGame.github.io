@@ -7063,7 +7063,7 @@ let dragQueens = [
     pageantQueen: true,
     fashionQueen: false,
     comedyQueen: false,
-    lipsyncAssassin: true,
+    lipsyncAssassin: false,
     wonSnatchGame: false,
     wonMissCongeniality: false,
     seasonWinner: false,
