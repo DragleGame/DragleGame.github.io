@@ -4918,7 +4918,7 @@ let dragQueens = [
   {
     name: "Acid Betty",
     seasonNumber: 8,
-    age: "1997-12-10",
+    age: "1977-12-10",
     franchise: "United States",
     season: 8,
     alternativeQueen: false,

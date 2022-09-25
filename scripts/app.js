@@ -221,21 +221,27 @@ function rightGuess() {
   let currentGuessNum = JSON.parse(nuberOfGuesses) + 1;
 
   if (currentGuessNum == 1) {
-    copyWin = "Dragle 1/8\n👑;\nPlay here: https://dragle.fun/";
+    copyWin = "Dragle 1/10\n👑;\nPlay here: https://dragle.fun/";
   } else if (currentGuessNum == 2) {
-    copyWin = "Dragle 2/8\n❌👑;\nPlay here: https://dragle.fun/";
+    copyWin = "Dragle 2/10\n❌👑;\nPlay here: https://dragle.fun/";
   } else if (currentGuessNum == 3) {
-    copyWin = "Dragle 3/8\n❌❌👑;\nPlay here: https://dragle.fun/";
+    copyWin = "Dragle 3/10\n❌❌👑;\nPlay here: https://dragle.fun/";
   } else if (currentGuessNum == 4) {
-    copyWin = "Dragle 4/8\n❌❌❌👑;\nPlay here: https://dragle.fun/";
+    copyWin = "Dragle 4/10\n❌❌❌👑;\nPlay here: https://dragle.fun/";
   } else if (currentGuessNum == 5) {
-    copyWin = "Dragle 5/8\n❌❌❌❌👑;\nPlay here: https://dragle.fun/";
+    copyWin = "Dragle 5/10\n❌❌❌❌👑;\nPlay here: https://dragle.fun/";
   } else if (currentGuessNum == 6) {
-    copyWin = "Dragle 6/8\n❌❌❌❌❌👑;\nPlay here: https://dragle.fun/";
+    copyWin = "Dragle 6/10\n❌❌❌❌❌👑;\nPlay here: https://dragle.fun/";
   } else if (currentGuessNum == 7) {
-    copyWin = "Dragle 7/8\n❌❌❌❌❌❌👑;\nPlay here: https://dragle.fun/";
+    copyWin = "Dragle 7/10\n❌❌❌❌❌❌👑;\nPlay here: https://dragle.fun/";
   } else if (currentGuessNum == 8) {
-    copyWin = "Dragle 8/8\n❌❌❌❌❌❌❌👑;\nPlay here: https://dragle.fun/";
+    copyWin = "Dragle 8/10\n❌❌❌❌❌❌❌👑;\nPlay here: https://dragle.fun/";
+  } else if (currentGuessNum == 9) {
+    copyWin =
+      "Dragle 9/10\n❌❌❌❌❌❌❌❌👑;\nPlay here: https://dragle.fun/";
+  } else if (currentGuessNum == 10) {
+    copyWin =
+      "Dragle 10/10\n❌❌❌❌❌❌❌❌❌👑;\nPlay here: https://dragle.fun/";
   }
 
   copyShared = copyWin;
@@ -369,7 +375,8 @@ function wrongGuess() {
   //save time
   saveTime();
 
-  let copyLost = "Dragle X/8\n❌❌❌❌❌❌❌❌\nPlay here: https://dragle.fun/";
+  let copyLost =
+    "Dragle X/10\n❌❌❌❌❌❌❌❌❌❌\nPlay here: https://dragle.fun/";
   copyShared = copyLost;
   window.localStorage.setItem("contentShare", copyShared);
 
@@ -556,7 +563,7 @@ form.addEventListener("submit", function (event) {
 
   //check number of plays
   let currentGuessCount = window.localStorage.getItem("guessCount") || 0;
-  if (currentGuessCount < 7) {
+  if (currentGuessCount < 9) {
     if (guess.name === dragOfTheDay.name) {
       rightGuess();
     } else {
@@ -700,7 +707,7 @@ form.addEventListener("submit", function (event) {
     //guessCount++;
     currentGuessCount++;
     let guessPlaceholder = currentGuessCount + 1;
-    formGuess.placeholder = "Guess " + guessPlaceholder + " of 8";
+    formGuess.placeholder = "Guess " + guessPlaceholder + " of 10";
     //window.localStorage.setItem("guessCount", Number(guessCount));
     window.localStorage.setItem("guessCount", Number(currentGuessCount));
     preserveGameState();
