@@ -32,6 +32,15 @@ let doubleShantay = document.getElementById("doubleShantay");
 let doubleSashay = document.getElementById("doubleSashay");
 let allStars = document.getElementById("allStars");
 let runnerUp = document.getElementById("runnerUp");
+let rusicalWinner = document.getElementById("rusicalWinner");
+let makeoverChallengeWinner = document.getElementById(
+  "makeoverChallengeWinner"
+);
+let standUpRoastWinner = document.getElementById("standUpRoastWinner");
+let readingChallengeWinner = document.getElementById("readingChallengeWinner");
+let maxiChallengeWinner = document.getElementById("maxiChallengeWinner");
+let talentShowWinner = document.getElementById("talentShowWinner");
+let noChallengeWin = document.getElementById("noChallengeWin");
 let btnStart = document.getElementById("start");
 const form = document.querySelector("#dragleForm");
 let endModal = document.querySelector("#endModal");
@@ -364,6 +373,45 @@ function rightGuess() {
   if (dragOfTheDay.runnerUp === true) {
     runnerUp.classList.remove("hidden");
   }
+
+  let rusicalWinner = document.getElementById("rusicalWinner");
+  if (dragOfTheDay.rusicalWinner === true) {
+    rusicalWinner.classList.remove("hidden");
+  }
+
+  let makeoverChallengeWinner = document.getElementById(
+    "makeoverChallengeWinner"
+  );
+  if (dragOfTheDay.makeoverChallengeWinner === true) {
+    makeoverChallengeWinner.classList.remove("hidden");
+  }
+
+  let standUpRoastWinner = document.getElementById("standUpRoastWinner");
+  if (dragOfTheDay.standUpRoastWinner === true) {
+    standUpRoastWinner.classList.remove("hidden");
+  }
+
+  let readingChallengeWinner = document.getElementById(
+    "readingChallengeWinner"
+  );
+  if (dragOfTheDay.readingChallengeWinner === true) {
+    readingChallengeWinner.classList.remove("hidden");
+  }
+
+  let maxiChallengeWinner = document.getElementById("maxiChallengeWinner");
+  if (dragOfTheDay.maxiChallengeWinner === true) {
+    maxiChallengeWinner.classList.remove("hidden");
+  }
+
+  let talentShowWinner = document.getElementById("talentShowWinner");
+  if (dragOfTheDay.talentShowWinner === true) {
+    talentShowWinner.classList.remove("hidden");
+  }
+
+  let noChallengeWin = document.getElementById("noChallengeWin");
+  if (dragOfTheDay.noChallengeWin === true) {
+    noChallengeWin.classList.remove("hidden");
+  }
 }
 
 function wrongGuess() {
@@ -496,6 +544,45 @@ function wrongGuess() {
   let runnerUp = document.getElementById("runnerUp");
   if (dragOfTheDay.runnerUp === true) {
     runnerUp.classList.remove("hidden");
+  }
+
+  let rusicalWinner = document.getElementById("rusicalWinner");
+  if (dragOfTheDay.rusicalWinner === true) {
+    rusicalWinner.classList.remove("hidden");
+  }
+
+  let makeoverChallengeWinner = document.getElementById(
+    "makeoverChallengeWinner"
+  );
+  if (dragOfTheDay.makeoverChallengeWinner === true) {
+    makeoverChallengeWinner.classList.remove("hidden");
+  }
+
+  let standUpRoastWinner = document.getElementById("standUpRoastWinner");
+  if (dragOfTheDay.standUpRoastWinner === true) {
+    standUpRoastWinner.classList.remove("hidden");
+  }
+
+  let readingChallengeWinner = document.getElementById(
+    "readingChallengeWinner"
+  );
+  if (dragOfTheDay.readingChallengeWinner === true) {
+    readingChallengeWinner.classList.remove("hidden");
+  }
+
+  let maxiChallengeWinner = document.getElementById("maxiChallengeWinner");
+  if (dragOfTheDay.maxiChallengeWinner === true) {
+    maxiChallengeWinner.classList.remove("hidden");
+  }
+
+  let talentShowWinner = document.getElementById("talentShowWinner");
+  if (dragOfTheDay.talentShowWinner === true) {
+    talentShowWinner.classList.remove("hidden");
+  }
+
+  let noChallengeWin = document.getElementById("noChallengeWin");
+  if (dragOfTheDay.noChallengeWin === true) {
+    noChallengeWin.classList.remove("hidden");
   }
 }
 
@@ -703,6 +790,45 @@ form.addEventListener("submit", function (event) {
       if (matchVal.runnerUp === true) {
         runnerUp.classList.remove("hidden");
       }
+
+      let rusicalWinner = document.getElementById("rusicalWinner");
+      if (matchVal.rusicalWinner === true) {
+        rusicalWinner.classList.remove("hidden");
+      }
+
+      let makeoverChallengeWinner = document.getElementById(
+        "makeoverChallengeWinner"
+      );
+      if (matchVal.makeoverChallengeWinner === true) {
+        makeoverChallengeWinner.classList.remove("hidden");
+      }
+
+      let standUpRoastWinner = document.getElementById("standUpRoastWinner");
+      if (matchVal.standUpRoastWinner === true) {
+        standUpRoastWinner.classList.remove("hidden");
+      }
+
+      let readingChallengeWinner = document.getElementById(
+        "readingChallengeWinner"
+      );
+      if (matchVal.readingChallengeWinner === true) {
+        readingChallengeWinner.classList.remove("hidden");
+      }
+
+      let maxiChallengeWinner = document.getElementById("maxiChallengeWinner");
+      if (matchVal.maxiChallengeWinner === true) {
+        maxiChallengeWinner.classList.remove("hidden");
+      }
+
+      let talentShowWinner = document.getElementById("talentShowWinner");
+      if (matchVal.talentShowWinner === true) {
+        talentShowWinner.classList.remove("hidden");
+      }
+
+      let noChallengeWin = document.getElementById("noChallengeWin");
+      if (matchVal.noChallengeWin === true) {
+        noChallengeWin.classList.remove("hidden");
+      }
     }
     //guessCount++;
     currentGuessCount++;
@@ -854,6 +980,45 @@ form.addEventListener("submit", function (event) {
       let runnerUp = document.getElementById("runnerUp");
       if (matchVal.runnerUp === true) {
         runnerUp.classList.remove("hidden");
+      }
+
+      let rusicalWinner = document.getElementById("rusicalWinner");
+      if (matchVal.rusicalWinner === true) {
+        rusicalWinner.classList.remove("hidden");
+      }
+
+      let makeoverChallengeWinner = document.getElementById(
+        "makeoverChallengeWinner"
+      );
+      if (matchVal.makeoverChallengeWinner === true) {
+        makeoverChallengeWinner.classList.remove("hidden");
+      }
+
+      let standUpRoastWinner = document.getElementById("standUpRoastWinner");
+      if (matchVal.standUpRoastWinner === true) {
+        standUpRoastWinner.classList.remove("hidden");
+      }
+
+      let readingChallengeWinner = document.getElementById(
+        "readingChallengeWinner"
+      );
+      if (matchVal.readingChallengeWinner === true) {
+        readingChallengeWinner.classList.remove("hidden");
+      }
+
+      let maxiChallengeWinner = document.getElementById("maxiChallengeWinner");
+      if (matchVal.maxiChallengeWinner === true) {
+        maxiChallengeWinner.classList.remove("hidden");
+      }
+
+      let talentShowWinner = document.getElementById("talentShowWinner");
+      if (matchVal.talentShowWinner === true) {
+        talentShowWinner.classList.remove("hidden");
+      }
+
+      let noChallengeWin = document.getElementById("noChallengeWin");
+      if (matchVal.noChallengeWin === true) {
+        noChallengeWin.classList.remove("hidden");
       }
 
       wrongGuess();
