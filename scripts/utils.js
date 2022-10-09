@@ -11868,7 +11868,7 @@ let dragQueens = [
   {
     name: "Scarlet Adams",
     seasonNumber: 20,
-    age: 28,
+    age: "1993-02-17",
     franchise: "Down Under",
     season: "Season 1",
     alternativeQueen: false,
