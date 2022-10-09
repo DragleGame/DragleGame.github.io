@@ -1647,6 +1647,13 @@ let dragNamesList = [
   "Pomara Fifth",
   "Spankie Jackzon",
   "Yuri Guaii",
+  "Scarlet Adams",
+  "Elliott with 2 Ts",
+  "Trinity The Tuck",
+  "Jimbo",
+  "Raven",
+  "Manila Luzon",
+  "Sharonne",
 ];
 
 /*initiate the autocomplete function on the input element, and pass along the countries array as possible autocomplete values:*/
