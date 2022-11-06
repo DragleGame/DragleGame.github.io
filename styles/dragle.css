@@ -1,7 +1,7 @@
 @import url("/styles/common.css");
 
 /*FONTS*/
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;600&display=swap');
 
 /*RESET*/
 *,
@@ -20,64 +20,101 @@
 }
 
 #content-wrap {
-  padding-bottom: 50px;    
+  padding-bottom: 15%;
+  margin: 0 auto;
+     
 }
 
 
 /*HEADER*/
 header {
-  margin: 30px auto 50px;
+  padding-top: 30px;
   text-align: center;
-  width: 60%;
   align-items: center;
 }
+nav {
+  text-align: right;
+}
+
 .buttonsHeader{
-  width: 9%;
-  margin: 0 auto;
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 50px;
+  padding: 5px 10px;
+  margin: 0 10px;
   display: inline-flex;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white);
+  text-transform: uppercase;
 }
 
 #icon-information, #icon-stats {
-  margin: 0 auto;
+  margin: 0 5px 0 0;
   text-align: center;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
 }
 
 .logoHeader {
-  width: 80%;
   margin: 0 auto;
   display: inline-flex;
   vertical-align: middle;
 }
 
 #logoImg {
-width: 40%;
+width: 33%;
 margin:0 auto;
 
 }
 
-h1 {
-  font-size: 70px;
-  text-align: center;
-  color: var(--primary);
-  padding: 0 0 20px;
-  margin: 0 auto;
-}
-
-#help {
-color: var(--white);
-font-size: 16px;
-position: fixed;
-top: 3%;
-right: 10%;
-}
-
-/*GUESS BOX*/
-#formContainer {
+/*FORM*/
+main {
   width: 60%;
   margin: 0 auto;
-  padding: 30px;
+}
+
+#infoHighlight {
+  background-color: #E4D7C9;
+  border-radius: 10px;
+  display: inline-flex;
+  padding: 10px 15px;
+  font-weight: 300;
+  color: var(--text);
+  align-items: center;
+  margin: 0 auto 30px;
+}
+
+#infoButton {
+  background-color: var(--text);
+  color: var(--white);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 14px;
+  border-radius: 50px;
+  border: 2px solid var(--text);
+  margin: 0 0 0 10px;
+  padding: 5px 10px;
+  align-items: center;
+  display: inline-flex;
+}
+
+#infoButton:hover {
+  background-color: #1F202D;
+}
+
+#ic-inf {
+  margin: 0 5px 0 0;
+  text-align: center;
+  width: 18px;
+  height: 18px;
+
+}
+
+
+#formContainer {
+  margin: 0 auto;
+  padding: 30px 0;
   vertical-align: middle;
   text-align: center;
 }
@@ -97,6 +134,7 @@ h6 {
 
 #dragleForm {
   position: relative;
+  
 }
 
 #dragName {
@@ -110,6 +148,7 @@ h6 {
   vertical-align: middle;
   font-size: 16px;
   color: var(--text);
+  font-weight: 300;
 }
 
 #gussBtn {
@@ -130,28 +169,45 @@ h6 {
 }
 
 /*DRAG TAGS*/
+
+h1 {
+  font-size: 24px;
+  color: var(--text);
+  font-weight: 600;
+  text-align: left;
+}
+
+h2 {
+  font-size: 16px;
+  color: var(--text);
+  font-weight: 300;
+  text-align: left;
+}
+
+
 #dragTags {
   margin: 0 auto;
-  width: 55%;
   text-align: center;
 }
 
 .dragTag {
   font-size: 17px;
-  color: var(--white);
-  background-color: var(--primary);
-  padding: 10px 20px;
+  padding: 5px 10px;
   border-radius: 50px;
   text-align: center;
-  margin: 15px;
+  margin: 7px;
   display: inline-flex;
-  
+  color: var(--white);
+  background-color: var(--primary);
 }
 
 /*PAST GUESSES*/
+#userGuess {
+  margin-top: 30px;
+}
+
 #pastGuessesContainer {
-  margin: 40px auto;
-  width: 55%;
+  margin: 0 auto;
 }
 
 .pastGuessBox {
@@ -171,6 +227,7 @@ h6 {
   display: inline;
   margin-right: 16px;
   font-size: 16px;
+  font-weight: 300;
 }
 
 .hidden {
@@ -204,6 +261,7 @@ h6 {
   padding: 30px;
   width: 50%; /* Could be more or less, depending on screen size */
   text-align: center;
+  font-weight: 300;
 }
 
 h3 {
@@ -284,21 +342,45 @@ h3 {
 
 footer {
   background-color: var(--primary);
-  padding: 15px 0;
-  bottom: 0;
+  padding: 40px 0 20px 0;
   text-align: center;
   width: 100%;
-  height: 50px;
-  position: absolute;
+  display: inline-flex;
+  right: 0;
   bottom: 0;
+  left: 0;
+}
+
+#footerLinks, #footerAbout {
+  width: 33%;
+  display: block;
+  text-align: center;
+}
+
+#footerBugs {
+  padding: 15px 0;
+  width: 33%;
+  display: block;
+  text-align: center;
+}
+
+#reportBugs {
+  background-color: #984ABF;
+  color: var(--bg);
+  border: none;
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 300;
 }
 
 .footerText {
   font-size: 16px;
+  font-weight: 300;
   color: var(--bg);
   text-align: center;
-  display: inline-flex;
-  padding: 0 30px;
+  padding: 10px 30px;
 }
 
 .examplesImgs {
@@ -308,21 +390,12 @@ footer {
 
 /*RESPONSIVE*/
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 956px) {
 
-  #pastGuessesContainer, header {
+  main {
     width: 80%;
-  }
+  }  
 
-  #dragTags {
-    padding-top: 20px;
-    width: 90%;
-  }
-
-  #formContainer {
-    padding: 0;
-    width: 90%;
-  }
 
   #resultContainer {
     width: 100%;
@@ -341,31 +414,30 @@ footer {
   }
 
 }
+@media only screen and (max-width: 800px) {
 
-@media only screen and (max-width: 790px){
-  footer {
-    height: 95px;
+  #footerAbout {
+    display: none;
   }
 
-  #content-wrap {
-    padding-bottom: 95px;    
+  #footerLinks, #footerBugs {
+    width: 49%;
   }
 
-  .footerText{
-    padding: 5px 30px;
+  nav {
+    margin-bottom: 30px;
   }
+
+  #logoImg {
+    width: 40%;
+  }
+
 }
+
 
 @media only screen and (max-width: 560px) {
   #gussBtn {
     font-size: 16px;
-  }
-
-  h1 {
-    font-size: 50px;
-  }
-  .logoHeader {
-    width: 70%;
   }
 
   .dragTag {
@@ -374,12 +446,8 @@ footer {
     padding: 5px 10px;
   }
 
-  footer {
-    height: 120px;
-  }
-
-  #content-wrap {
-    padding-bottom: 120px;    
+  main {
+    width: 90%;
   }
 
   .examplesImgs {
@@ -387,15 +455,27 @@ footer {
   }
 
   #logoImg {
-  width: 75%;
-  }
-
-  #pastGuessesContainer, header {
-    width: 95%;
+  width: 50%;
   }
 
   .dragStats {
     font-size: 14px;
+  }
+
+  #infoButton {
+    font-size: 10px;
+  }
+  
+  #ic-inf {
+    display: none;
+  }
+
+  footer {
+    display: block;
+  }
+
+  #footerLinks, #footerBugs {
+    width: 90%;
   }
 }
 
@@ -439,4 +519,11 @@ footer {
 .autocomplete-active {
   background-color: var(--primary) !important; 
   color: #ffffff; 
+}
+
+
+/*HOW TO*/
+#how-to {
+  font-weight: 300;
+  margin: 30px auto;
 }
