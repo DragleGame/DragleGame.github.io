@@ -1083,7 +1083,7 @@ btnShareModal.addEventListener("click", (event) => {
 
 //open stats modal
 let statsModal = document.getElementById("statsModal");
-let statsButton = document.getElementById("icon-stats");
+let statsButton = document.getElementById("statsButton");
 
 statsButton.onclick = function () {
   let totalGames = window.localStorage.getItem("totalGames");
@@ -1110,9 +1110,21 @@ closeStatsModal.onclick = function () {
   statsModal.style.display = "none";
 };
 
+//open bug report
+let reportButton = document.getElementById("reportBugs");
+
+reportButton.onclick = function () {
+  window.open("https://forms.gle/fF6Dtb4wtxZ74wE8A", "_blank");
+};
+
 //open info modal
 let infoModal = document.getElementById("infoModal");
-let infoButton = document.getElementById("icon-information");
+let infosButton = document.getElementById("infosButton");
+let infoButton = document.getElementById("infoButton");
+
+infosButton.onclick = function () {
+  infoModal.style.display = "block";
+};
 
 infoButton.onclick = function () {
   infoModal.style.display = "block";
