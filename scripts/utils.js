@@ -10846,7 +10846,7 @@ let dragQueens = [
     noChallengeWin: false,
   },
   {
-    name: "La Briochée",
+    name: "La Briochee",
     seasonNumber: 29,
     age: "1991-03-16",
     franchise: "France",
