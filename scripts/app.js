@@ -80,6 +80,11 @@ window.onload = function () {
     resetGameState();
     //location.reload();
   }
+
+  //test streak
+  let yesterdayStreak = window.localStorage.getItem("longestStreak") || 0;
+  window.localStorage.setItem("currentStreak", Number(yesterdayStreak));
+
   loadLocalStorage();
 };
 //array of objects of queens
