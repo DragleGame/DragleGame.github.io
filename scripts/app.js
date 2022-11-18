@@ -82,8 +82,8 @@ window.onload = function () {
   }
 
   //test streak
-  let yesterdayStreak = window.localStorage.getItem("longestStreak") || 0;
-  window.localStorage.setItem("currentStreak", Number(yesterdayStreak));
+  //let yesterdayStreak = window.localStorage.getItem("longestStreak") || 0;
+  //window.localStorage.setItem("currentStreak", Number(yesterdayStreak));
 
   loadLocalStorage();
 };
