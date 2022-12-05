@@ -1534,7 +1534,7 @@ let dragNamesList = [
   "Joey Jay",
   "Kahmora Hall",
   "Lawrence Chaney",
-  "Bimini Bon-Boulash",
+  "Bimini",
   "Tayce",
   "Ellie Diamond",
   "AWhora",
