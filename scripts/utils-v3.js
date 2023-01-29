@@ -6296,7 +6296,7 @@ let dragQueens = [
     readingChallengeWinner: false,
     maxiChallengeWinner: false,
     talentShowWinner: false,
-    noChallengeWin: true,
+    noChallengeWin: false,
     continent: "America",
   },
   {
@@ -6897,7 +6897,7 @@ let dragQueens = [
   {
     name: "Roem",
     seasonNumber: 17,
-    age: "1992-02-10",
+    age: "1999-02-10",
     franchise: "Holland",
     season: 1,
     alternativeQueen: true,
