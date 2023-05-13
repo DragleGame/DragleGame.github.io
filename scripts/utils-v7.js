@@ -4632,7 +4632,7 @@ let dragQueens = [
     lipsyncAssassin: true,
     wonSnatchGame: false,
     wonMissCongeniality: false,
-    seasonWinner: false,
+    seasonWinner: true,
     used: 1,
     firstOut: false,
     impersonator: false,
